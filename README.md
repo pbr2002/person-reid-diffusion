@@ -66,7 +66,7 @@ conda deactivate
 ## 2.3 路径修改（非常重要！！！）
 
 **⚠️ 重要提示：**  
-代码中存在硬编码的数据集路径（本程序中所有数据集路径均在`/mnt/data_hdd1/yangj/pbr`下，包括原始数据集路径、增强数据集路径、混合增强数据集路径）。这些路径会直接影响数据集的读取、生成与保存，**运行前必须全部替换为你本地的实际路径**，否则程序会因找不到数据集或者生成的数据集无法正确保存而报错。
+代码中存在硬编码的数据集路径（本程序中所有数据集路径均在`/mnt/data_hdd1/yangj/pbr`下，包括原始数据集路径data、扩散模型增强数据集路径augmented_data、扩散模型混合数据集路径mixed_data、GAN模型增强数据集路径other_augmented_data、GAN模型混合数据集路径other_mixed_data）。这些路径会直接影响数据集的读取、生成与保存，**运行前必须全部替换为你本地的实际路径**，否则程序会因找不到数据集或者生成的数据集无法正确保存而报错。
 
 请按以下步骤检查并修改：
 
@@ -110,7 +110,7 @@ nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python train_dcac.py \
 # 步骤2：混合原始数据集与增强数据集
 python mix_market501.py  # MSMT17数据集则运行mix_msmt17.py
 
-# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合增强后的market501数据集路径）
+# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合后的market501数据集路径）
 cd /home/yangj/cluster-contrast-reid
 conda activate pbr
 
@@ -144,7 +144,7 @@ nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
 # 步骤2：混合原始数据集与增强数据集
 python mix_market501.py  # MSMT17数据集则运行mix_msmt17.py
 
-# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合增强后的market501数据集路径）
+# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合后的market501数据集路径）
 cd /home/yangj/cluster-contrast-reid
 conda activate pbr
 
