@@ -33,7 +33,7 @@ cd ..
 各模型的依赖包已放在对应文件夹的 `requirements.txt` 中，按需安装：
 ```bash
 # 示例：安装基线模型依赖
-cd cluster-contrast-reid
+cd ../cluster-contrast-reid
 pip install -r requirements.txt
 
 # 安装扩散模型依赖
@@ -169,92 +169,4 @@ A3：直接访问 HuggingFace 链接（https://huggingface.co/stable-diffusion-v
 | GAN模型增强       | -               | -                  | -          |
 > 注：请将实验得到的具体数值填入上表，用于结果分析与答辩展示。
 ```
-
-### 关键说明
-1. 文档全程采用纯 Markdown 语法编写，包含标题、表格、代码块、列表、引用等核心格式，可直接复制到 GitHub 仓库的 `README.md` 文件中使用；
-2. 保留所有实验核心逻辑，补充了虚拟环境名称、格式优化、毕设专属模块，符合 GitHub 开源规范和毕设评审要求；
-3. 代码块、表格、层级标题等格式在 GitHub 上会自动渲染，可读性强，使用者可直接复制命令运行。
-
-### 使用方式
-1. 将上述内容全选复制，替换你仓库中原有 `README.md` 的内容；
-2. 补充“6. 实验结果”表格中的具体数值（根据你的实验数据填写）；
-3. 提交并推送更新：
-   ```bash
-   git add README.md
-   git commit -m "更新README为规范Markdown格式，补充虚拟环境名称"
-   git push origin main
-   ```
-
-路径问题代码运行之后会报错，根据报错修改，或者直接全文件搜索文件路径如/mnt/data_hdd1/yangj/pbr/data，找到有这个地址的代码位置根据自己的地址进行修改
-
-
-一、使用market1501数据集来运行行人重识别模型测试结果：
-
-1.cd /home/yangj/cluster-contrast-reid,并进入pbr虚拟环境
-
-2.运行下面python脚本，其中-d 后面填写的market1501是数据集名称，--data-dir /mnt/data_hdd1/yangj/pbr/data是数据集所在路径
-
-nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python examples/cluster_contrast_train_usl.py -b 256 -a resnet50 -d market1501 --iters 200 --momentum 0.1 --eps 0.6 --num-instances 16 --data-dir /mnt/data_hdd1/yangj/pbr/data > nohup.out 2>&1 &
-
-3.代码模型测试结果在nohup.out文件中，打开nohup.out文件查看测试结果
-
-4.将nohup.out文件改名成market501.out，运行其他数据集时测试结果被覆盖
-
-二、使用使用扩散模型增强后的数据集（mixed_market1501数据集）来运行行人重识别模型测试结果：
-
-1.cd /home/yangj/DCAC，并进入DCAC虚拟环境
-
-2.运行下面python脚本代码，其中如果要增强market501数据集则路径改为ms_to_ma，增强msmt17数据集则改为ma_to_ms
-
-nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python train_dcac.py --config_file alchemycat_configs
-/single-source/ms_to_ma/cfg.py > output.log 2>&1 &
-
-3.在/home/yangj/DCAC路径下，运行这个python脚本，把原有数据集与增强数据集混合,msmt17数据集就改为mix_msmt17.py
-python mix_market501.py
-
-4.cd /home/yangj/cluster-contrast-reid,并进入pbr虚拟环境
-
-5.运行下面python脚本，--data-dir /mnt/data_hdd1/yangj/pbr/mixed_data把数据集路径进行修改
-
-nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python examples/cluster_contrast_train_usl.py -b 256 -a resnet50 -d market1501 --iters 200 --momentum 0.1 --eps 0.6 --num-instances 16 --data-dir /mnt/data_hdd1/yangj/pbr/mixed_data > nohup.out 2>&1 &
-
-6.代码模型测试结果在nohup.out文件中，打开nohup.out文件查看测试结果
-
-7.将nohup.out文件改名成mixed_market501.out，运行其他数据集时测试结果被覆盖
-
-
-三、使用使用GAN模型增强后的数据集（mixed_market1501数据集）来运行行人重识别模型测试结果：
-
-1.cd /home/yangj/DCGAN-tensorflow，并进入DCGAN虚拟环境
-
-2.运行下面python脚本代码，其中如果要增强market501数据集则路径改为--data_dir /mnt/data_hdd1/yangj/pbr/data/market1501/Market-1501-v15.09.15，增强数据集保存路径改为--sample_dir /mnt/data_hdd1/yangj/pbr/other_augmented_data/augmented-market1501，增强msmt17数据集则改为--data_dir /mnt/data_hdd1/yangj/pbr/data/msmt17/MSMT17_V1，增强数据集保存路径改为--sample_dir /mnt/data_hdd1/yangj/pbr/other_augmented_data/augmented-msmt17，
-
-
-nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --dataset=bounding_box_train --data_dir /mnt/data_hdd1/yangj/pbr/data/market1501/Market-1501-v15.09.15 --train=True --sample_dir /mnt/data_hdd1/yangj/pbr/other_augmented_data/augmented-market1501 --crop=True > output.log 2>&1 &
-
-3.在/home/yangj/DCGAN-tensorflow路径下，运行这个python脚本，把原有数据集与增强数据集混合,msmt17数据集就改为mix_msmt17.py
-
-python mix_market501.py
-
-4.cd /home/yangj/cluster-contrast-reid,并进入pbr虚拟环境
-
-5.运行下面python脚本，--data-dir /mnt/data_hdd1/yangj/pbr/other_mixed_data把数据集路径进行修改
-
-nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python examples/cluster_contrast_train_usl.py -b 256 -a resnet50 -d market1501 --iters 200 --momentum 0.1 --eps 0.6 --num-instances 16 --data-dir /mnt/data_hdd1/yangj/pbr/other_mixed_data > nohup.out 2>&1 &
-
-6.代码模型测试结果在nohup.out文件中，打开nohup.out文件查看测试结果
-
-7.将nohup.out文件改名成other_mixed_market501.out，运行其他数据集时测试结果被覆盖
-
-四、对比market501.out和mixed_market501.out的测试结果，检测模型精度是否有提升
-
-注意：如果数据集过大，记得把四个文件夹下的图片清空，之后重新进行实验流程即可
-
-/mnt/data_hdd1/yangj/pbr/data/augmented-market1501
-
-/mnt/data_hdd1/yangj/pbr/mixed_data/ market1501/Market-1501-v15.09.15/bounding_box_train
-
-/mnt/data_hdd1/yangj/pbr/mixed_data/ msmt17/MSMT17_V1/bounding_box_train
-
-/mnt/data_hdd1/yangj/pbr/data/augmented_msmt17
 
