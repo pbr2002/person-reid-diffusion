@@ -11,6 +11,13 @@ GAN模型（DCGAN-tensorflow）：python3.7 原始链接：https://github.com/ca
 
 CUDA 12.4以及PyTorch 1.8.0
 
+注意：在扩散模型（DCAC）中，预先训练的扩散重量
+
+使用了stable-diffusion-v1-5，你可以在🤗Huggingface上找到它。我们使用全重v1-5-pruned.ckpt进行微调。下载预先训练好的砝码，并将其放入pretrained的新文件夹中。
+
+mkdir pretrained && cd pretrained
+wget https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/blob/main/v1-5-pruned.ckpt
+
 其他需要的环境可以直接代码运行查看提示有什么需要的再安装
 
 路径问题代码运行之后会报错，根据报错修改，或者直接全文件搜索文件路径如/mnt/data_hdd1/yangj/pbr/data，找到有这个地址的代码位置根据自己的地址进行修改
