@@ -66,7 +66,7 @@ conda deactivate
 ## 2.3 路径修改（非常重要！！！）
 
 **⚠️ 重要提示：**  
-代码中存在硬编码的数据集路径（本程序中所有数据集路径均在`/mnt/data_hdd1/yangj/pbr`下，包括原始数据集路径data、扩散模型增强数据集路径augmented_data、扩散模型混合数据集路径mixed_data、GAN模型增强数据集路径other_augmented_data、GAN模型混合数据集路径other_mixed_data）。这些路径会直接影响数据集的读取、生成与保存，**运行前必须全部替换为你本地的实际路径**，否则程序会因找不到数据集或者生成的数据集无法正确保存而报错。
+代码中存在硬编码的数据集路径（本程序中所有数据集路径均在`/mnt/data_hdd1/yangj/pbr`下，包括原始数据集路径`data`、扩散模型增强数据集路径`augmented_data`、扩散模型混合数据集路径`mixed_data`、GAN模型增强数据集路径`other_augmented_data`、GAN模型混合数据集路径`other_mixed_data`）。这些路径会直接影响数据集的读取、生成与保存，**运行前必须全部替换为你本地的实际路径**，否则程序会因找不到数据集或者生成的数据集无法正确保存而报错。
 
 请按以下步骤检查并修改：
 
