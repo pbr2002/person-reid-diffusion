@@ -14,15 +14,10 @@
 | GAN模型（DCGAN-tensorflow）| 3.7    | TensorFlow     | 运行代码，根据所缺依赖包进行安装 |
 | 通用环境                | -          | CUDA 12.4      | -                  |
 
-环境设置
-
-基线模型（cluster-contrast-reid）：python3.9 原始链接：https://github.com/alibaba/cluster-contrast-reid
-
-扩散模型（DCAC）：python3.10 原始链接：https://github.com/RikoLi/DCAC
-
-GAN模型（DCGAN-tensorflow）：python3.7 原始链接：https://github.com/carpedm20/DCGAN-tensorflow?tab=readme-ov-file
-
-CUDA 12.4以及PyTorch 1.8.0
+### 1.3 参考开源项目
+- Cluster-Contrast-ReID：https://github.com/alibaba/cluster-contrast-reid
+- DCAC（扩散模型）：https://github.com/RikoLi/DCAC
+- DCGAN-tensorflow：https://github.com/carpedm20/DCGAN-tensorflow?tab=readme-ov-file
 
 注意：在扩散模型（DCAC）中，预先训练的扩散重量
 
