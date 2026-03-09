@@ -169,7 +169,7 @@ conda deactivate
 
 ## 4. 注意事项
 ### 4.1 数据集清理（避免数据冗余）
-若数据集体积过大，需清空以下文件夹(展示非全部，主要是两个增强数据集路径和两个混合数据集路径)后重新执行实验：
+若数据集体积过大，需清空两个增强数据集和两个混合数据集文件夹(例如以下)后重新执行实验：
 ```
 /mnt/data_hdd1/yangj/pbr/augmented_data/
 /mnt/data_hdd1/yangj/pbr/mixed_data/market1501/Market-1501-v15.09.15/bounding_box_train
