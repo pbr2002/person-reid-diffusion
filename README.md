@@ -51,6 +51,7 @@ cd ../DCGAN-tensorflow
 # 该项目无固定 requirements.txt
 # 先安装基础依赖，若运行时报错，再根据提示补装缺失包
 pip install tensorflow numpy scipy pillow matplotlib
+```
 
 ### 2.3 路径修改（关键！）
 代码中硬编码的数据集路径（如 `/mnt/data_hdd1/yangj/pbr/data`）需替换为你的本地路径：
