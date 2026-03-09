@@ -66,7 +66,7 @@ pip install tensorflow numpy scipy pillow matplotlib
 cd /home/yangj/cluster-contrast-reid
 conda activate pbr
 
-# 2. 运行训练脚本（4卡训练，Market-1501数据集）
+# 2. 运行训练脚本（4卡训练，Market-1501数据集，--data-dir需修改成自己的market501数据集地址）
 nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python examples/cluster_contrast_train_usl.py \
   -b 256 -a resnet50 -d market1501 \
   --iters 200 --momentum 0.1 --eps 0.6 --num-instances 16 \
@@ -92,7 +92,7 @@ nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python train_dcac.py \
 # 步骤2：混合原始数据集与增强数据集
 python mix_market501.py  # MSMT17数据集则运行mix_msmt17.py
 
-# 步骤3：基于混合数据集训练基线模型（pbr环境）
+# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合增强后的market501数据集地址）
 cd /home/yangj/cluster-contrast-reid
 conda activate pbr
 
@@ -112,7 +112,7 @@ mv nohup.out mixed_market1501_diffusion.out
 cd /home/yangj/DCGAN-tensorflow
 conda activate DCGAN
 
-# 增强Market-1501数据集（MSMT17需修改data_dir和sample_dir）
+# 增强Market-1501数据集（需修改自己的data_dir和sample_dir）
 nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
   --dataset=bounding_box_train \
   --data_dir /mnt/data_hdd1/yangj/pbr/data/market1501/Market-1501-v15.09.15 \
@@ -123,7 +123,7 @@ nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
 # 步骤2：混合原始数据集与增强数据集
 python mix_market501.py  # MSMT17数据集则运行mix_msmt17.py
 
-# 步骤3：基于混合数据集训练基线模型（pbr环境）
+# 步骤3：基于混合数据集训练基线模型（pbr环境，--data-dir需修改成自己的混合增强后的market501数据集地址）
 cd /home/yangj/cluster-contrast-reid
 conda activate pbr
 
