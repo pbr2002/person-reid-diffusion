@@ -24,6 +24,7 @@
 DCAC 模型依赖 `stable-diffusion-v1-5` 预训练权重，需手动下载并放置到指定路径：
 ```bash
 # 创建pretrained文件夹并下载权重
+cd ../DCAC
 mkdir pretrained && cd pretrained
 wget https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt
 ```
