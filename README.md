@@ -171,10 +171,11 @@ conda deactivate
 ### 4.1 数据集清理（避免数据冗余）
 若数据集体积过大，需清空以下文件夹后重新执行实验：
 ```
-/mnt/data_hdd1/yangj/pbr/data/augmented-market1501
+/mnt/data_hdd1/yangj/pbr/augmented_data/
 /mnt/data_hdd1/yangj/pbr/mixed_data/market1501/Market-1501-v15.09.15/bounding_box_train
-/mnt/data_hdd1/yangj/pbr/mixed_data/msmt17/MSMT17_V1/bounding_box_train
-/mnt/data_hdd1/yangj/pbr/data/augmented
+/mnt/data_hdd1/yangj/pbr/other_mixed_data/msmt17/MSMT17_V1/bounding_box_train
+/mnt/data_hdd1/yangj/pbr/other_augmented_data/
+...
 ```
 
 ### 4.2 虚拟环境切换
