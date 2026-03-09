@@ -11,8 +11,9 @@
 |-------------------------|------------|----------------|--------------------|
 | 基线模型（cluster-contrast-reid） | 3.9        | PyTorch 1.8.0  | 详见对应文件夹requirements.txt |
 | 扩散模型（DCAC）| 3.10       | PyTorch 1.8.0  | 详见对应文件夹requirements.txt |
-| GAN模型（DCGAN-tensorflow）| 3.7    | TensorFlow     | 详见对应文件夹requirements.txt |
+| GAN模型（DCGAN-tensorflow）| 3.7    | TensorFlow     | 运行代码，根据所缺依赖包进行安装 |
 | 通用环境                | -          | CUDA 12.4      | -                  |
+
 环境设置
 
 基线模型（cluster-contrast-reid）：python3.9 原始链接：https://github.com/alibaba/cluster-contrast-reid
