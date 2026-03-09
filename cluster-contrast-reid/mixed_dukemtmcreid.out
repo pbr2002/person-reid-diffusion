@@ -1,0 +1,1451 @@
+nohup: ignoring input
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+==========
+Args:Namespace(dataset='dukemtmcreid', batch_size=256, workers=4, height=256, width=128, num_instances=16, eps=0.6, eps_gap=0.02, k1=30, k2=6, arch='resnet50', features=0, dropout=0, momentum=0.1, lr=0.00035, weight_decay=0.0005, epochs=50, iters=200, step_size=20, seed=1, print_freq=10, eval_step=10, temp=0.05, data_dir='/mnt/data_hdd1/yangj/pbr/mixed_data', logs_dir='/home/yangj/cluster-contrast-reid/examples/logs', pooling_type='gem', use_hard=False, no_cam=False)
+==========
+==> Load unlabeled dataset
+==> Create pseudo labels for unlabeled data
+/home/yangj/cluster-contrast-reid/clustercontrast/utils/faiss_utils.py:10: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  x.storage().data_ptr() + x.storage_offset() * 4)
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.718 (0.773)	Data 0.000 (0.020)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 22.640867233276367
+Clustering criterion: eps: 0.600
+==> Statistics for epoch 0: 461 clusters
+Epoch: [0][10/200]	Time 1.565 (1.799)	Data 0.000 (0.092)	Loss 5.362 (5.486)
+Epoch: [0][20/200]	Time 1.435 (1.645)	Data 0.001 (0.046)	Loss 5.647 (5.571)
+Epoch: [0][30/200]	Time 1.530 (1.649)	Data 0.000 (0.076)	Loss 4.514 (5.540)
+Epoch: [0][40/200]	Time 1.486 (1.604)	Data 0.000 (0.057)	Loss 5.175 (5.406)
+Epoch: [0][50/200]	Time 1.493 (1.570)	Data 0.000 (0.046)	Loss 5.636 (5.376)
+Epoch: [0][60/200]	Time 1.435 (1.564)	Data 0.000 (0.055)	Loss 5.082 (5.366)
+Epoch: [0][70/200]	Time 1.384 (1.546)	Data 0.000 (0.048)	Loss 5.169 (5.302)
+Epoch: [0][80/200]	Time 1.453 (1.535)	Data 0.000 (0.042)	Loss 4.098 (5.231)
+Epoch: [0][90/200]	Time 1.612 (1.543)	Data 0.000 (0.053)	Loss 4.331 (5.185)
+Epoch: [0][100/200]	Time 1.399 (1.534)	Data 0.000 (0.048)	Loss 4.664 (5.127)
+Epoch: [0][110/200]	Time 1.458 (1.525)	Data 0.000 (0.043)	Loss 3.392 (5.069)
+Epoch: [0][120/200]	Time 1.365 (1.522)	Data 0.000 (0.050)	Loss 3.465 (4.998)
+Epoch: [0][130/200]	Time 1.461 (1.511)	Data 0.001 (0.046)	Loss 4.372 (4.924)
+Epoch: [0][140/200]	Time 2.632 (1.572)	Data 0.000 (0.043)	Loss 3.598 (4.865)
+Epoch: [0][150/200]	Time 2.437 (1.638)	Data 0.001 (0.047)	Loss 4.109 (4.794)
+Epoch: [0][160/200]	Time 2.650 (1.697)	Data 0.000 (0.044)	Loss 4.364 (4.741)
+Epoch: [0][170/200]	Time 2.172 (1.750)	Data 0.000 (0.048)	Loss 3.967 (4.681)
+Epoch: [0][180/200]	Time 2.438 (1.791)	Data 0.000 (0.045)	Loss 3.532 (4.624)
+Epoch: [0][190/200]	Time 2.424 (1.822)	Data 0.000 (0.043)	Loss 3.948 (4.571)
+Epoch: [0][200/200]	Time 2.615 (1.858)	Data 0.000 (0.045)	Loss 3.108 (4.511)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.240 (1.312)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.700592756271362
+==> Statistics for epoch 1: 724 clusters
+Epoch: [1][10/200]	Time 2.350 (2.499)	Data 0.000 (0.082)	Loss 1.327 (1.591)
+Epoch: [1][20/200]	Time 2.456 (2.524)	Data 0.001 (0.041)	Loss 1.197 (1.486)
+Epoch: [1][30/200]	Time 2.562 (2.507)	Data 0.000 (0.028)	Loss 1.208 (1.424)
+Epoch: [1][40/200]	Time 2.530 (2.507)	Data 0.000 (0.021)	Loss 0.819 (1.379)
+Epoch: [1][50/200]	Time 2.358 (2.511)	Data 0.000 (0.037)	Loss 3.553 (1.525)
+Epoch: [1][60/200]	Time 2.584 (2.497)	Data 0.000 (0.031)	Loss 4.186 (1.819)
+Epoch: [1][70/200]	Time 2.491 (2.494)	Data 0.000 (0.027)	Loss 3.131 (2.049)
+Epoch: [1][80/200]	Time 2.403 (2.507)	Data 0.000 (0.023)	Loss 3.273 (2.237)
+Epoch: [1][90/200]	Time 2.626 (2.517)	Data 0.000 (0.021)	Loss 3.077 (2.373)
+Epoch: [1][100/200]	Time 2.007 (2.526)	Data 0.000 (0.029)	Loss 3.340 (2.468)
+Epoch: [1][110/200]	Time 2.585 (2.516)	Data 0.000 (0.026)	Loss 3.662 (2.579)
+Epoch: [1][120/200]	Time 2.669 (2.517)	Data 0.000 (0.024)	Loss 3.468 (2.660)
+Epoch: [1][130/200]	Time 2.609 (2.517)	Data 0.000 (0.022)	Loss 3.189 (2.724)
+Epoch: [1][140/200]	Time 2.655 (2.532)	Data 0.000 (0.029)	Loss 3.192 (2.761)
+Epoch: [1][150/200]	Time 2.375 (2.535)	Data 0.000 (0.027)	Loss 3.497 (2.812)
+Epoch: [1][160/200]	Time 2.366 (2.519)	Data 0.000 (0.026)	Loss 3.637 (2.863)
+Epoch: [1][170/200]	Time 2.621 (2.522)	Data 0.001 (0.024)	Loss 2.701 (2.891)
+Epoch: [1][180/200]	Time 2.590 (2.525)	Data 0.000 (0.023)	Loss 3.432 (2.911)
+Epoch: [1][190/200]	Time 2.604 (2.533)	Data 0.000 (0.028)	Loss 4.460 (2.931)
+Epoch: [1][200/200]	Time 2.352 (2.530)	Data 0.000 (0.026)	Loss 4.317 (2.945)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.333 (1.264)	Data 0.001 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.808133363723755
+==> Statistics for epoch 2: 819 clusters
+Epoch: [2][10/200]	Time 2.587 (2.536)	Data 0.000 (0.057)	Loss 1.074 (1.110)
+Epoch: [2][20/200]	Time 1.540 (2.407)	Data 0.000 (0.029)	Loss 1.289 (1.137)
+Epoch: [2][30/200]	Time 2.577 (2.435)	Data 0.001 (0.019)	Loss 0.971 (1.095)
+Epoch: [2][40/200]	Time 2.356 (2.430)	Data 0.000 (0.015)	Loss 0.726 (1.047)
+Epoch: [2][50/200]	Time 2.406 (2.431)	Data 0.000 (0.012)	Loss 1.187 (1.017)
+Epoch: [2][60/200]	Time 2.613 (2.458)	Data 0.000 (0.026)	Loss 3.651 (1.299)
+Epoch: [2][70/200]	Time 1.414 (2.444)	Data 0.000 (0.022)	Loss 2.425 (1.557)
+Epoch: [2][80/200]	Time 2.655 (2.447)	Data 0.001 (0.019)	Loss 2.753 (1.754)
+Epoch: [2][90/200]	Time 2.415 (2.446)	Data 0.000 (0.017)	Loss 2.614 (1.921)
+Epoch: [2][100/200]	Time 2.166 (2.444)	Data 0.000 (0.015)	Loss 3.529 (2.062)
+Epoch: [2][110/200]	Time 2.371 (2.456)	Data 0.000 (0.023)	Loss 2.783 (2.172)
+Epoch: [2][120/200]	Time 2.616 (2.461)	Data 0.000 (0.021)	Loss 3.353 (2.261)
+Epoch: [2][130/200]	Time 1.737 (2.432)	Data 0.000 (0.020)	Loss 3.189 (2.333)
+Epoch: [2][140/200]	Time 1.754 (2.384)	Data 0.000 (0.018)	Loss 2.747 (2.394)
+Epoch: [2][150/200]	Time 1.743 (2.343)	Data 0.000 (0.017)	Loss 2.961 (2.433)
+Epoch: [2][160/200]	Time 1.733 (2.313)	Data 0.000 (0.022)	Loss 2.742 (2.485)
+Epoch: [2][170/200]	Time 1.737 (2.280)	Data 0.000 (0.021)	Loss 2.727 (2.528)
+Epoch: [2][180/200]	Time 1.825 (2.253)	Data 0.000 (0.020)	Loss 2.879 (2.561)
+Epoch: [2][190/200]	Time 1.802 (2.226)	Data 0.000 (0.019)	Loss 2.431 (2.590)
+Epoch: [2][200/200]	Time 1.767 (2.204)	Data 0.000 (0.018)	Loss 3.329 (2.623)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.194 (1.046)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.606194496154785
+==> Statistics for epoch 3: 863 clusters
+Epoch: [3][10/200]	Time 2.415 (2.516)	Data 0.001 (0.070)	Loss 1.205 (0.998)
+Epoch: [3][20/200]	Time 2.545 (2.490)	Data 0.000 (0.035)	Loss 0.924 (1.017)
+Epoch: [3][30/200]	Time 2.366 (2.470)	Data 0.000 (0.024)	Loss 1.157 (1.028)
+Epoch: [3][40/200]	Time 2.570 (2.423)	Data 0.000 (0.018)	Loss 1.303 (1.021)
+Epoch: [3][50/200]	Time 2.207 (2.423)	Data 0.000 (0.014)	Loss 0.796 (0.976)
+Epoch: [3][60/200]	Time 2.520 (2.441)	Data 0.000 (0.028)	Loss 2.236 (1.156)
+Epoch: [3][70/200]	Time 2.402 (2.442)	Data 0.001 (0.024)	Loss 3.319 (1.406)
+Epoch: [3][80/200]	Time 2.578 (2.441)	Data 0.000 (0.021)	Loss 3.149 (1.634)
+Epoch: [3][90/200]	Time 2.328 (2.437)	Data 0.001 (0.019)	Loss 2.597 (1.789)
+Epoch: [3][100/200]	Time 2.556 (2.441)	Data 0.000 (0.017)	Loss 3.094 (1.926)
+Epoch: [3][110/200]	Time 2.400 (2.454)	Data 0.000 (0.026)	Loss 3.123 (2.038)
+Epoch: [3][120/200]	Time 2.403 (2.448)	Data 0.001 (0.024)	Loss 2.745 (2.129)
+Epoch: [3][130/200]	Time 2.388 (2.446)	Data 0.000 (0.022)	Loss 3.173 (2.202)
+Epoch: [3][140/200]	Time 2.628 (2.450)	Data 0.000 (0.021)	Loss 2.583 (2.272)
+Epoch: [3][150/200]	Time 2.323 (2.438)	Data 0.000 (0.019)	Loss 2.431 (2.313)
+Epoch: [3][160/200]	Time 3.408 (2.442)	Data 0.978 (0.024)	Loss 3.090 (2.357)
+Epoch: [3][170/200]	Time 2.343 (2.441)	Data 0.000 (0.023)	Loss 3.077 (2.405)
+Epoch: [3][180/200]	Time 2.318 (2.446)	Data 0.000 (0.022)	Loss 3.186 (2.449)
+Epoch: [3][190/200]	Time 2.497 (2.445)	Data 0.000 (0.021)	Loss 2.836 (2.474)
+Epoch: [3][200/200]	Time 2.042 (2.436)	Data 0.000 (0.020)	Loss 3.060 (2.509)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.309 (1.341)	Data 0.001 (0.016)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.97235131263733
+==> Statistics for epoch 4: 911 clusters
+Epoch: [4][10/200]	Time 2.211 (2.362)	Data 0.001 (0.073)	Loss 1.072 (1.103)
+Epoch: [4][20/200]	Time 2.438 (2.353)	Data 0.000 (0.037)	Loss 1.263 (1.049)
+Epoch: [4][30/200]	Time 2.241 (2.365)	Data 0.001 (0.025)	Loss 0.676 (1.012)
+Epoch: [4][40/200]	Time 2.289 (2.376)	Data 0.000 (0.019)	Loss 0.953 (0.986)
+Epoch: [4][50/200]	Time 2.458 (2.373)	Data 0.000 (0.015)	Loss 0.614 (0.950)
+Epoch: [4][60/200]	Time 2.331 (2.400)	Data 0.000 (0.032)	Loss 2.394 (1.056)
+Epoch: [4][70/200]	Time 2.342 (2.377)	Data 0.000 (0.028)	Loss 3.108 (1.327)
+Epoch: [4][80/200]	Time 2.514 (2.393)	Data 0.000 (0.024)	Loss 2.069 (1.524)
+Epoch: [4][90/200]	Time 2.450 (2.405)	Data 0.000 (0.022)	Loss 2.958 (1.688)
+Epoch: [4][100/200]	Time 2.385 (2.410)	Data 0.000 (0.020)	Loss 2.764 (1.815)
+Epoch: [4][110/200]	Time 2.535 (2.416)	Data 0.000 (0.018)	Loss 2.446 (1.922)
+Epoch: [4][120/200]	Time 2.267 (2.421)	Data 0.000 (0.027)	Loss 2.319 (2.013)
+Epoch: [4][130/200]	Time 2.608 (2.420)	Data 0.000 (0.025)	Loss 3.738 (2.109)
+Epoch: [4][140/200]	Time 2.570 (2.434)	Data 0.000 (0.023)	Loss 3.080 (2.185)
+Epoch: [4][150/200]	Time 2.588 (2.443)	Data 0.000 (0.021)	Loss 2.519 (2.247)
+Epoch: [4][160/200]	Time 2.373 (2.446)	Data 0.000 (0.020)	Loss 2.463 (2.295)
+Epoch: [4][170/200]	Time 2.267 (2.456)	Data 0.000 (0.025)	Loss 2.189 (2.337)
+Epoch: [4][180/200]	Time 2.363 (2.457)	Data 0.000 (0.024)	Loss 3.256 (2.388)
+Epoch: [4][190/200]	Time 2.621 (2.463)	Data 0.000 (0.022)	Loss 4.308 (2.438)
+Epoch: [4][200/200]	Time 2.635 (2.471)	Data 0.000 (0.021)	Loss 2.765 (2.471)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.884 (1.328)	Data 0.000 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.056149244308472
+==> Statistics for epoch 5: 839 clusters
+Epoch: [5][10/200]	Time 1.794 (1.756)	Data 0.000 (0.069)	Loss 1.086 (1.246)
+Epoch: [5][20/200]	Time 1.787 (1.762)	Data 0.000 (0.034)	Loss 1.188 (1.132)
+Epoch: [5][30/200]	Time 1.754 (1.762)	Data 0.000 (0.023)	Loss 0.703 (1.050)
+Epoch: [5][40/200]	Time 1.767 (1.764)	Data 0.000 (0.017)	Loss 1.010 (1.004)
+Epoch: [5][50/200]	Time 1.777 (1.763)	Data 0.000 (0.014)	Loss 0.694 (0.942)
+Epoch: [5][60/200]	Time 1.746 (1.787)	Data 0.000 (0.030)	Loss 3.151 (1.182)
+Epoch: [5][70/200]	Time 1.768 (1.787)	Data 0.001 (0.026)	Loss 3.583 (1.428)
+Epoch: [5][80/200]	Time 2.623 (1.838)	Data 0.000 (0.023)	Loss 2.646 (1.606)
+Epoch: [5][90/200]	Time 2.616 (1.926)	Data 0.001 (0.020)	Loss 3.186 (1.773)
+Epoch: [5][100/200]	Time 2.677 (1.993)	Data 0.000 (0.018)	Loss 3.615 (1.931)
+Epoch: [5][110/200]	Time 2.630 (2.061)	Data 0.000 (0.027)	Loss 3.002 (2.048)
+Epoch: [5][120/200]	Time 2.644 (2.105)	Data 0.000 (0.025)	Loss 3.677 (2.145)
+Epoch: [5][130/200]	Time 2.600 (2.130)	Data 0.000 (0.023)	Loss 2.967 (2.222)
+Epoch: [5][140/200]	Time 2.625 (2.166)	Data 0.000 (0.021)	Loss 3.555 (2.281)
+Epoch: [5][150/200]	Time 2.641 (2.197)	Data 0.000 (0.020)	Loss 3.031 (2.345)
+Epoch: [5][160/200]	Time 2.611 (2.228)	Data 0.000 (0.026)	Loss 3.414 (2.388)
+Epoch: [5][170/200]	Time 2.635 (2.251)	Data 0.000 (0.024)	Loss 3.206 (2.428)
+Epoch: [5][180/200]	Time 2.637 (2.258)	Data 0.000 (0.023)	Loss 3.253 (2.458)
+Epoch: [5][190/200]	Time 2.646 (2.276)	Data 0.000 (0.022)	Loss 2.938 (2.498)
+Epoch: [5][200/200]	Time 2.629 (2.294)	Data 0.000 (0.021)	Loss 3.197 (2.525)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.380 (1.349)	Data 0.000 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.799543857574463
+==> Statistics for epoch 6: 812 clusters
+Epoch: [6][10/200]	Time 2.620 (2.607)	Data 0.000 (0.064)	Loss 1.110 (1.009)
+Epoch: [6][20/200]	Time 2.628 (2.620)	Data 0.000 (0.032)	Loss 1.354 (1.017)
+Epoch: [6][30/200]	Time 2.637 (2.623)	Data 0.000 (0.021)	Loss 0.938 (0.989)
+Epoch: [6][40/200]	Time 2.431 (2.573)	Data 0.000 (0.016)	Loss 0.854 (0.940)
+Epoch: [6][50/200]	Time 2.631 (2.571)	Data 0.000 (0.013)	Loss 0.625 (0.899)
+Epoch: [6][60/200]	Time 2.627 (2.589)	Data 0.000 (0.029)	Loss 2.993 (1.230)
+Epoch: [6][70/200]	Time 2.628 (2.595)	Data 0.000 (0.025)	Loss 3.153 (1.458)
+Epoch: [6][80/200]	Time 2.602 (2.597)	Data 0.000 (0.022)	Loss 2.709 (1.634)
+Epoch: [6][90/200]	Time 2.327 (2.575)	Data 0.000 (0.020)	Loss 2.418 (1.770)
+Epoch: [6][100/200]	Time 2.433 (2.572)	Data 0.000 (0.018)	Loss 3.008 (1.902)
+Epoch: [6][110/200]	Time 2.636 (2.582)	Data 0.000 (0.027)	Loss 2.100 (1.994)
+Epoch: [6][120/200]	Time 2.597 (2.581)	Data 0.000 (0.024)	Loss 3.584 (2.076)
+Epoch: [6][130/200]	Time 2.617 (2.580)	Data 0.000 (0.023)	Loss 3.325 (2.151)
+Epoch: [6][140/200]	Time 2.340 (2.570)	Data 0.000 (0.021)	Loss 2.968 (2.212)
+Epoch: [6][150/200]	Time 2.613 (2.565)	Data 0.000 (0.020)	Loss 2.988 (2.268)
+Epoch: [6][160/200]	Time 2.607 (2.575)	Data 0.000 (0.025)	Loss 3.509 (2.316)
+Epoch: [6][170/200]	Time 2.642 (2.575)	Data 0.000 (0.024)	Loss 2.193 (2.344)
+Epoch: [6][180/200]	Time 2.437 (2.572)	Data 0.000 (0.023)	Loss 2.686 (2.380)
+Epoch: [6][190/200]	Time 2.304 (2.565)	Data 0.000 (0.021)	Loss 2.721 (2.431)
+Epoch: [6][200/200]	Time 2.425 (2.557)	Data 0.000 (0.020)	Loss 2.943 (2.453)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.398 (1.366)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.292276859283447
+==> Statistics for epoch 7: 782 clusters
+Epoch: [7][10/200]	Time 2.615 (2.410)	Data 0.000 (0.070)	Loss 0.941 (0.931)
+Epoch: [7][20/200]	Time 2.658 (2.492)	Data 0.000 (0.035)	Loss 0.682 (0.908)
+Epoch: [7][30/200]	Time 2.394 (2.504)	Data 0.000 (0.023)	Loss 0.938 (0.876)
+Epoch: [7][40/200]	Time 2.619 (2.506)	Data 0.000 (0.018)	Loss 0.547 (0.809)
+Epoch: [7][50/200]	Time 2.421 (2.532)	Data 0.000 (0.036)	Loss 2.982 (0.871)
+Epoch: [7][60/200]	Time 1.777 (2.449)	Data 0.000 (0.030)	Loss 2.674 (1.169)
+Epoch: [7][70/200]	Time 1.829 (2.351)	Data 0.000 (0.026)	Loss 2.562 (1.380)
+Epoch: [7][80/200]	Time 1.792 (2.279)	Data 0.000 (0.023)	Loss 2.466 (1.536)
+Epoch: [7][90/200]	Time 1.780 (2.223)	Data 0.000 (0.020)	Loss 2.828 (1.675)
+Epoch: [7][100/200]	Time 1.740 (2.191)	Data 0.000 (0.030)	Loss 3.137 (1.788)
+Epoch: [7][110/200]	Time 1.803 (2.153)	Data 0.000 (0.027)	Loss 2.633 (1.861)
+Epoch: [7][120/200]	Time 1.751 (2.120)	Data 0.000 (0.025)	Loss 2.311 (1.936)
+Epoch: [7][130/200]	Time 1.774 (2.093)	Data 0.000 (0.023)	Loss 3.285 (2.031)
+Epoch: [7][140/200]	Time 1.764 (2.071)	Data 0.000 (0.021)	Loss 3.428 (2.101)
+Epoch: [7][150/200]	Time 2.316 (2.071)	Data 0.000 (0.027)	Loss 2.950 (2.148)
+Epoch: [7][160/200]	Time 2.374 (2.096)	Data 0.000 (0.026)	Loss 2.742 (2.186)
+Epoch: [7][170/200]	Time 2.600 (2.125)	Data 0.000 (0.024)	Loss 3.068 (2.240)
+Epoch: [7][180/200]	Time 2.397 (2.151)	Data 0.000 (0.023)	Loss 2.528 (2.273)
+Epoch: [7][190/200]	Time 2.661 (2.173)	Data 0.000 (0.022)	Loss 2.672 (2.301)
+Epoch: [7][200/200]	Time 2.325 (2.195)	Data 0.000 (0.026)	Loss 3.227 (2.330)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.287 (1.325)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.452891826629639
+==> Statistics for epoch 8: 802 clusters
+Epoch: [8][10/200]	Time 2.548 (2.620)	Data 0.000 (0.067)	Loss 0.981 (0.909)
+Epoch: [8][20/200]	Time 2.617 (2.555)	Data 0.000 (0.034)	Loss 0.640 (0.879)
+Epoch: [8][30/200]	Time 2.622 (2.579)	Data 0.000 (0.023)	Loss 0.752 (0.828)
+Epoch: [8][40/200]	Time 2.622 (2.590)	Data 0.000 (0.017)	Loss 0.929 (0.826)
+Epoch: [8][50/200]	Time 2.657 (2.586)	Data 0.000 (0.014)	Loss 0.478 (0.787)
+Epoch: [8][60/200]	Time 2.585 (2.610)	Data 0.000 (0.031)	Loss 2.223 (1.094)
+Epoch: [8][70/200]	Time 2.617 (2.575)	Data 0.000 (0.027)	Loss 2.395 (1.302)
+Epoch: [8][80/200]	Time 2.637 (2.581)	Data 0.001 (0.023)	Loss 3.320 (1.500)
+Epoch: [8][90/200]	Time 2.608 (2.586)	Data 0.000 (0.021)	Loss 3.024 (1.695)
+Epoch: [8][100/200]	Time 2.581 (2.589)	Data 0.000 (0.019)	Loss 2.492 (1.795)
+Epoch: [8][110/200]	Time 2.596 (2.602)	Data 0.000 (0.027)	Loss 2.657 (1.878)
+Epoch: [8][120/200]	Time 2.637 (2.581)	Data 0.000 (0.025)	Loss 2.799 (1.948)
+Epoch: [8][130/200]	Time 2.620 (2.584)	Data 0.000 (0.023)	Loss 3.145 (2.017)
+Epoch: [8][140/200]	Time 2.611 (2.587)	Data 0.000 (0.021)	Loss 2.320 (2.075)
+Epoch: [8][150/200]	Time 2.398 (2.586)	Data 0.000 (0.020)	Loss 2.597 (2.126)
+Epoch: [8][160/200]	Time 2.391 (2.586)	Data 0.000 (0.026)	Loss 2.918 (2.176)
+Epoch: [8][170/200]	Time 2.251 (2.570)	Data 0.000 (0.024)	Loss 2.816 (2.233)
+Epoch: [8][180/200]	Time 2.605 (2.569)	Data 0.000 (0.023)	Loss 2.813 (2.269)
+Epoch: [8][190/200]	Time 2.644 (2.572)	Data 0.000 (0.022)	Loss 2.766 (2.299)
+Epoch: [8][200/200]	Time 2.646 (2.575)	Data 0.000 (0.021)	Loss 2.282 (2.316)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.314 (1.305)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.17052435874939
+==> Statistics for epoch 9: 772 clusters
+Epoch: [9][10/200]	Time 2.331 (2.470)	Data 0.000 (0.065)	Loss 0.721 (0.860)
+Epoch: [9][20/200]	Time 2.419 (2.507)	Data 0.000 (0.032)	Loss 0.605 (0.808)
+Epoch: [9][30/200]	Time 2.324 (2.459)	Data 0.000 (0.022)	Loss 0.652 (0.801)
+Epoch: [9][40/200]	Time 2.664 (2.482)	Data 0.000 (0.016)	Loss 0.634 (0.765)
+Epoch: [9][50/200]	Time 2.634 (2.522)	Data 0.000 (0.036)	Loss 2.937 (0.812)
+Epoch: [9][60/200]	Time 2.534 (2.523)	Data 0.000 (0.030)	Loss 2.663 (1.089)
+Epoch: [9][70/200]	Time 2.661 (2.522)	Data 0.000 (0.026)	Loss 2.493 (1.296)
+Epoch: [9][80/200]	Time 2.360 (2.510)	Data 0.000 (0.022)	Loss 2.395 (1.447)
+Epoch: [9][90/200]	Time 2.605 (2.509)	Data 0.000 (0.020)	Loss 2.634 (1.601)
+Epoch: [9][100/200]	Time 2.649 (2.532)	Data 0.000 (0.029)	Loss 3.432 (1.713)
+Epoch: [9][110/200]	Time 2.616 (2.540)	Data 0.000 (0.026)	Loss 2.657 (1.805)
+Epoch: [9][120/200]	Time 2.609 (2.548)	Data 0.000 (0.024)	Loss 2.762 (1.863)
+Epoch: [9][130/200]	Time 2.329 (2.547)	Data 0.000 (0.022)	Loss 2.263 (1.937)
+Epoch: [9][140/200]	Time 1.821 (2.496)	Data 0.000 (0.021)	Loss 2.364 (1.972)
+Epoch: [9][150/200]	Time 1.777 (2.459)	Data 0.000 (0.027)	Loss 3.033 (2.022)
+Epoch: [9][160/200]	Time 1.761 (2.416)	Data 0.000 (0.026)	Loss 2.947 (2.077)
+Epoch: [9][170/200]	Time 1.807 (2.378)	Data 0.000 (0.024)	Loss 3.208 (2.116)
+Epoch: [9][180/200]	Time 1.751 (2.343)	Data 0.000 (0.023)	Loss 2.512 (2.151)
+Epoch: [9][190/200]	Time 1.789 (2.312)	Data 0.000 (0.022)	Loss 2.684 (2.174)
+Epoch: [9][200/200]	Time 1.781 (2.289)	Data 0.001 (0.026)	Loss 2.379 (2.188)
+/home/yangj/cluster-contrast-reid/clustercontrast/evaluators.py:71: UserWarning: This overload of addmm_ is deprecated:
+	addmm_(Number beta, Number alpha, Tensor mat1, Tensor mat2)
+Consider using one of the following signatures instead:
+	addmm_(Tensor mat1, Tensor mat2, *, Number beta = 1, Number alpha = 1) (Triggered internally at /pytorch/torch/csrc/utils/python_arg_parser.cpp:1661.)
+  dist_m.addmm_(1, -2, x, y.t())
+Extract Features: [50/78]	Time 1.247 (1.001)	Data 0.000 (0.018)	
+Mean AP: 52.1%
+
+ * Finished epoch   9  model mAP: 52.1%  best: 52.1% *
+
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.337 (1.341)	Data 0.000 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.625235557556152
+==> Statistics for epoch 10: 790 clusters
+Epoch: [10][10/200]	Time 2.667 (2.550)	Data 0.000 (0.053)	Loss 0.773 (0.845)
+Epoch: [10][20/200]	Time 2.398 (2.525)	Data 0.000 (0.027)	Loss 1.046 (0.803)
+Epoch: [10][30/200]	Time 2.406 (2.539)	Data 0.000 (0.018)	Loss 0.551 (0.786)
+Epoch: [10][40/200]	Time 2.584 (2.526)	Data 0.000 (0.013)	Loss 0.670 (0.742)
+Epoch: [10][50/200]	Time 3.695 (2.529)	Data 1.113 (0.033)	Loss 3.071 (0.769)
+Epoch: [10][60/200]	Time 2.613 (2.544)	Data 0.000 (0.028)	Loss 2.615 (1.077)
+Epoch: [10][70/200]	Time 2.619 (2.532)	Data 0.000 (0.024)	Loss 2.512 (1.291)
+Epoch: [10][80/200]	Time 2.612 (2.542)	Data 0.000 (0.021)	Loss 2.506 (1.445)
+Epoch: [10][90/200]	Time 2.624 (2.551)	Data 0.000 (0.018)	Loss 3.090 (1.603)
+Epoch: [10][100/200]	Time 1.536 (2.540)	Data 0.000 (0.029)	Loss 2.719 (1.715)
+Epoch: [10][110/200]	Time 2.429 (2.542)	Data 0.000 (0.026)	Loss 3.067 (1.806)
+Epoch: [10][120/200]	Time 2.629 (2.546)	Data 0.000 (0.024)	Loss 2.455 (1.873)
+Epoch: [10][130/200]	Time 2.651 (2.552)	Data 0.000 (0.022)	Loss 2.818 (1.944)
+Epoch: [10][140/200]	Time 2.613 (2.554)	Data 0.000 (0.021)	Loss 3.273 (2.011)
+Epoch: [10][150/200]	Time 2.344 (2.555)	Data 0.000 (0.027)	Loss 2.620 (2.063)
+Epoch: [10][160/200]	Time 2.628 (2.552)	Data 0.000 (0.025)	Loss 2.594 (2.115)
+Epoch: [10][170/200]	Time 2.591 (2.550)	Data 0.000 (0.024)	Loss 3.174 (2.148)
+Epoch: [10][180/200]	Time 2.635 (2.552)	Data 0.000 (0.022)	Loss 2.012 (2.175)
+Epoch: [10][190/200]	Time 2.501 (2.553)	Data 0.000 (0.021)	Loss 3.559 (2.212)
+Epoch: [10][200/200]	Time 2.343 (2.555)	Data 0.000 (0.026)	Loss 2.707 (2.243)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 1.254 (1.329)	Data 0.000 (0.018)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.265251636505127
+==> Statistics for epoch 11: 739 clusters
+Epoch: [11][10/200]	Time 2.277 (2.537)	Data 0.000 (0.072)	Loss 0.677 (0.855)
+Epoch: [11][20/200]	Time 2.666 (2.505)	Data 0.000 (0.036)	Loss 0.849 (0.829)
+Epoch: [11][30/200]	Time 2.586 (2.541)	Data 0.000 (0.024)	Loss 0.660 (0.774)
+Epoch: [11][40/200]	Time 2.386 (2.541)	Data 0.000 (0.018)	Loss 0.727 (0.738)
+Epoch: [11][50/200]	Time 2.390 (2.568)	Data 0.000 (0.036)	Loss 2.496 (0.848)
+Epoch: [11][60/200]	Time 1.998 (2.566)	Data 0.000 (0.030)	Loss 2.408 (1.124)
+Epoch: [11][70/200]	Time 2.335 (2.529)	Data 0.000 (0.026)	Loss 2.601 (1.349)
+Epoch: [11][80/200]	Time 2.563 (2.518)	Data 0.001 (0.023)	Loss 2.895 (1.552)
+Epoch: [11][90/200]	Time 2.620 (2.530)	Data 0.000 (0.020)	Loss 2.604 (1.669)
+Epoch: [11][100/200]	Time 2.652 (2.550)	Data 0.000 (0.029)	Loss 2.109 (1.758)
+Epoch: [11][110/200]	Time 2.624 (2.557)	Data 0.000 (0.027)	Loss 2.780 (1.836)
+Epoch: [11][120/200]	Time 2.628 (2.544)	Data 0.000 (0.025)	Loss 2.802 (1.928)
+Epoch: [11][130/200]	Time 2.627 (2.551)	Data 0.000 (0.023)	Loss 2.802 (1.988)
+Epoch: [11][140/200]	Time 2.623 (2.564)	Data 0.000 (0.029)	Loss 3.139 (2.034)
+Epoch: [11][150/200]	Time 2.627 (2.565)	Data 0.000 (0.027)	Loss 2.435 (2.072)
+Epoch: [11][160/200]	Time 2.466 (2.563)	Data 0.000 (0.025)	Loss 3.080 (2.109)
+Epoch: [11][170/200]	Time 1.770 (2.539)	Data 0.000 (0.024)	Loss 2.410 (2.150)
+Epoch: [11][180/200]	Time 1.747 (2.495)	Data 0.000 (0.023)	Loss 2.702 (2.175)
+Epoch: [11][190/200]	Time 1.755 (2.465)	Data 0.000 (0.028)	Loss 3.088 (2.201)
+Epoch: [11][200/200]	Time 1.783 (2.429)	Data 0.000 (0.026)	Loss 3.354 (2.231)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.939 (0.961)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.120327472686768
+==> Statistics for epoch 12: 763 clusters
+Epoch: [12][10/200]	Time 1.768 (1.787)	Data 0.000 (0.068)	Loss 0.974 (0.877)
+Epoch: [12][20/200]	Time 1.445 (1.696)	Data 0.000 (0.034)	Loss 0.745 (0.812)
+Epoch: [12][30/200]	Time 1.324 (1.615)	Data 0.000 (0.023)	Loss 0.874 (0.806)
+Epoch: [12][40/200]	Time 1.393 (1.564)	Data 0.000 (0.017)	Loss 1.023 (0.772)
+Epoch: [12][50/200]	Time 1.535 (1.570)	Data 0.001 (0.039)	Loss 2.566 (0.839)
+Epoch: [12][60/200]	Time 1.370 (1.544)	Data 0.000 (0.033)	Loss 1.823 (1.072)
+Epoch: [12][70/200]	Time 1.574 (1.529)	Data 0.000 (0.028)	Loss 2.395 (1.293)
+Epoch: [12][80/200]	Time 1.449 (1.517)	Data 0.000 (0.025)	Loss 2.922 (1.448)
+Epoch: [12][90/200]	Time 1.459 (1.508)	Data 0.000 (0.022)	Loss 3.364 (1.576)
+Epoch: [12][100/200]	Time 1.433 (1.514)	Data 0.000 (0.033)	Loss 3.162 (1.691)
+Epoch: [12][110/200]	Time 1.482 (1.510)	Data 0.000 (0.030)	Loss 3.497 (1.760)
+Epoch: [12][120/200]	Time 1.528 (1.507)	Data 0.000 (0.028)	Loss 2.121 (1.834)
+Epoch: [12][130/200]	Time 1.471 (1.502)	Data 0.000 (0.026)	Loss 2.756 (1.891)
+Epoch: [12][140/200]	Time 1.410 (1.500)	Data 0.000 (0.024)	Loss 2.770 (1.936)
+Epoch: [12][150/200]	Time 1.451 (1.508)	Data 0.000 (0.032)	Loss 2.651 (2.013)
+Epoch: [12][160/200]	Time 1.508 (1.507)	Data 0.000 (0.030)	Loss 2.650 (2.049)
+Epoch: [12][170/200]	Time 1.465 (1.503)	Data 0.000 (0.028)	Loss 2.360 (2.075)
+Epoch: [12][180/200]	Time 1.439 (1.502)	Data 0.000 (0.026)	Loss 2.160 (2.103)
+Epoch: [12][190/200]	Time 1.454 (1.506)	Data 0.000 (0.032)	Loss 2.456 (2.141)
+Epoch: [12][200/200]	Time 1.446 (1.503)	Data 0.000 (0.031)	Loss 2.392 (2.171)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.668 (0.723)	Data 0.000 (0.021)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.21885061264038
+==> Statistics for epoch 13: 758 clusters
+Epoch: [13][10/200]	Time 1.470 (1.429)	Data 0.000 (0.062)	Loss 0.734 (0.816)
+Epoch: [13][20/200]	Time 1.499 (1.433)	Data 0.000 (0.031)	Loss 0.842 (0.798)
+Epoch: [13][30/200]	Time 1.459 (1.445)	Data 0.000 (0.021)	Loss 0.796 (0.775)
+Epoch: [13][40/200]	Time 1.454 (1.452)	Data 0.000 (0.016)	Loss 0.669 (0.745)
+Epoch: [13][50/200]	Time 1.492 (1.485)	Data 0.000 (0.039)	Loss 2.743 (0.810)
+Epoch: [13][60/200]	Time 1.368 (1.481)	Data 0.000 (0.033)	Loss 2.158 (1.061)
+Epoch: [13][70/200]	Time 1.462 (1.479)	Data 0.000 (0.028)	Loss 2.871 (1.246)
+Epoch: [13][80/200]	Time 1.376 (1.478)	Data 0.000 (0.025)	Loss 2.029 (1.404)
+Epoch: [13][90/200]	Time 1.485 (1.476)	Data 0.000 (0.022)	Loss 2.626 (1.554)
+Epoch: [13][100/200]	Time 1.515 (1.491)	Data 0.000 (0.036)	Loss 3.016 (1.623)
+Epoch: [13][110/200]	Time 1.475 (1.486)	Data 0.000 (0.033)	Loss 2.496 (1.706)
+Epoch: [13][120/200]	Time 1.492 (1.483)	Data 0.000 (0.030)	Loss 2.651 (1.762)
+Epoch: [13][130/200]	Time 1.455 (1.481)	Data 0.000 (0.028)	Loss 2.506 (1.805)
+Epoch: [13][140/200]	Time 1.491 (1.480)	Data 0.000 (0.026)	Loss 2.361 (1.865)
+Epoch: [13][150/200]	Time 1.429 (1.489)	Data 0.000 (0.033)	Loss 2.170 (1.899)
+Epoch: [13][160/200]	Time 1.531 (1.489)	Data 0.000 (0.031)	Loss 2.725 (1.944)
+Epoch: [13][170/200]	Time 1.437 (1.488)	Data 0.000 (0.029)	Loss 2.740 (1.969)
+Epoch: [13][180/200]	Time 1.478 (1.485)	Data 0.000 (0.028)	Loss 2.682 (2.011)
+Epoch: [13][190/200]	Time 1.539 (1.493)	Data 0.000 (0.034)	Loss 2.155 (2.045)
+Epoch: [13][200/200]	Time 1.527 (1.490)	Data 0.000 (0.032)	Loss 2.621 (2.064)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.692 (0.719)	Data 0.000 (0.022)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.86129355430603
+==> Statistics for epoch 14: 748 clusters
+Epoch: [14][10/200]	Time 1.440 (1.447)	Data 0.000 (0.070)	Loss 0.680 (0.846)
+Epoch: [14][20/200]	Time 1.532 (1.452)	Data 0.000 (0.035)	Loss 0.516 (0.720)
+Epoch: [14][30/200]	Time 1.516 (1.462)	Data 0.000 (0.024)	Loss 0.509 (0.698)
+Epoch: [14][40/200]	Time 1.426 (1.461)	Data 0.000 (0.018)	Loss 0.566 (0.666)
+Epoch: [14][50/200]	Time 1.485 (1.492)	Data 0.000 (0.044)	Loss 2.320 (0.777)
+Epoch: [14][60/200]	Time 1.511 (1.490)	Data 0.000 (0.037)	Loss 2.107 (1.037)
+Epoch: [14][70/200]	Time 1.438 (1.486)	Data 0.000 (0.032)	Loss 2.726 (1.266)
+Epoch: [14][80/200]	Time 1.464 (1.485)	Data 0.000 (0.028)	Loss 2.315 (1.434)
+Epoch: [14][90/200]	Time 1.535 (1.484)	Data 0.000 (0.025)	Loss 2.856 (1.550)
+Epoch: [14][100/200]	Time 1.418 (1.497)	Data 0.000 (0.036)	Loss 2.354 (1.627)
+Epoch: [14][110/200]	Time 1.398 (1.492)	Data 0.000 (0.033)	Loss 2.673 (1.695)
+Epoch: [14][120/200]	Time 1.567 (1.492)	Data 0.000 (0.030)	Loss 3.010 (1.782)
+Epoch: [14][130/200]	Time 1.452 (1.490)	Data 0.000 (0.028)	Loss 2.527 (1.839)
+Epoch: [14][140/200]	Time 1.468 (1.499)	Data 0.000 (0.036)	Loss 2.350 (1.889)
+Epoch: [14][150/200]	Time 1.387 (1.494)	Data 0.000 (0.034)	Loss 2.422 (1.926)
+Epoch: [14][160/200]	Time 1.366 (1.490)	Data 0.000 (0.032)	Loss 2.525 (1.972)
+Epoch: [14][170/200]	Time 1.304 (1.485)	Data 0.000 (0.030)	Loss 2.374 (1.998)
+Epoch: [14][180/200]	Time 1.454 (1.482)	Data 0.000 (0.028)	Loss 2.774 (2.033)
+Epoch: [14][190/200]	Time 1.459 (1.490)	Data 0.000 (0.035)	Loss 2.397 (2.063)
+Epoch: [14][200/200]	Time 1.421 (1.487)	Data 0.000 (0.033)	Loss 3.157 (2.094)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.633 (0.698)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.544124364852905
+==> Statistics for epoch 15: 728 clusters
+Epoch: [15][10/200]	Time 1.540 (1.424)	Data 0.000 (0.064)	Loss 0.844 (0.782)
+Epoch: [15][20/200]	Time 1.463 (1.450)	Data 0.000 (0.032)	Loss 0.790 (0.778)
+Epoch: [15][30/200]	Time 1.462 (1.462)	Data 0.000 (0.022)	Loss 0.748 (0.772)
+Epoch: [15][40/200]	Time 1.383 (1.444)	Data 0.000 (0.016)	Loss 0.394 (0.735)
+Epoch: [15][50/200]	Time 1.500 (1.471)	Data 0.000 (0.041)	Loss 3.001 (0.900)
+Epoch: [15][60/200]	Time 1.421 (1.466)	Data 0.000 (0.034)	Loss 2.237 (1.139)
+Epoch: [15][70/200]	Time 1.459 (1.466)	Data 0.000 (0.029)	Loss 2.706 (1.321)
+Epoch: [15][80/200]	Time 1.461 (1.466)	Data 0.000 (0.026)	Loss 2.960 (1.472)
+Epoch: [15][90/200]	Time 1.482 (1.466)	Data 0.000 (0.023)	Loss 1.957 (1.590)
+Epoch: [15][100/200]	Time 1.470 (1.480)	Data 0.000 (0.035)	Loss 2.765 (1.683)
+Epoch: [15][110/200]	Time 1.361 (1.477)	Data 0.000 (0.032)	Loss 2.063 (1.760)
+Epoch: [15][120/200]	Time 1.464 (1.474)	Data 0.000 (0.030)	Loss 2.861 (1.824)
+Epoch: [15][130/200]	Time 1.480 (1.474)	Data 0.000 (0.027)	Loss 1.948 (1.877)
+Epoch: [15][140/200]	Time 1.403 (1.482)	Data 0.000 (0.035)	Loss 2.397 (1.934)
+Epoch: [15][150/200]	Time 1.483 (1.480)	Data 0.000 (0.032)	Loss 2.345 (1.983)
+Epoch: [15][160/200]	Time 1.401 (1.477)	Data 0.000 (0.030)	Loss 3.025 (2.027)
+Epoch: [15][170/200]	Time 1.361 (1.475)	Data 0.000 (0.029)	Loss 2.759 (2.053)
+Epoch: [15][180/200]	Time 1.415 (1.469)	Data 0.000 (0.027)	Loss 2.089 (2.076)
+Epoch: [15][190/200]	Time 1.426 (1.472)	Data 0.000 (0.032)	Loss 2.248 (2.098)
+Epoch: [15][200/200]	Time 1.407 (1.467)	Data 0.000 (0.030)	Loss 2.066 (2.117)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.642 (0.694)	Data 0.000 (0.021)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.128039598464966
+==> Statistics for epoch 16: 732 clusters
+Epoch: [16][10/200]	Time 1.430 (1.387)	Data 0.000 (0.059)	Loss 0.575 (0.706)
+Epoch: [16][20/200]	Time 1.416 (1.396)	Data 0.000 (0.030)	Loss 0.578 (0.668)
+Epoch: [16][30/200]	Time 1.417 (1.405)	Data 0.000 (0.020)	Loss 0.312 (0.627)
+Epoch: [16][40/200]	Time 1.371 (1.405)	Data 0.000 (0.015)	Loss 0.733 (0.621)
+Epoch: [16][50/200]	Time 1.391 (1.429)	Data 0.000 (0.033)	Loss 2.138 (0.789)
+Epoch: [16][60/200]	Time 1.398 (1.424)	Data 0.000 (0.028)	Loss 2.387 (1.031)
+Epoch: [16][70/200]	Time 1.338 (1.420)	Data 0.000 (0.024)	Loss 2.247 (1.222)
+Epoch: [16][80/200]	Time 1.380 (1.418)	Data 0.001 (0.021)	Loss 3.272 (1.377)
+Epoch: [16][90/200]	Time 1.376 (1.414)	Data 0.000 (0.019)	Loss 2.854 (1.477)
+Epoch: [16][100/200]	Time 1.540 (1.427)	Data 0.000 (0.029)	Loss 2.027 (1.570)
+Epoch: [16][110/200]	Time 1.425 (1.424)	Data 0.000 (0.026)	Loss 2.464 (1.628)
+Epoch: [16][120/200]	Time 1.359 (1.421)	Data 0.000 (0.024)	Loss 2.041 (1.678)
+Epoch: [16][130/200]	Time 1.369 (1.420)	Data 0.000 (0.022)	Loss 2.393 (1.766)
+Epoch: [16][140/200]	Time 1.370 (1.427)	Data 0.000 (0.029)	Loss 2.646 (1.827)
+Epoch: [16][150/200]	Time 1.449 (1.425)	Data 0.000 (0.027)	Loss 2.208 (1.869)
+Epoch: [16][160/200]	Time 1.376 (1.424)	Data 0.000 (0.026)	Loss 2.035 (1.922)
+Epoch: [16][170/200]	Time 1.406 (1.421)	Data 0.000 (0.024)	Loss 2.312 (1.960)
+Epoch: [16][180/200]	Time 1.391 (1.421)	Data 0.000 (0.023)	Loss 2.481 (1.984)
+Epoch: [16][190/200]	Time 1.400 (1.426)	Data 0.000 (0.027)	Loss 1.866 (1.995)
+Epoch: [16][200/200]	Time 1.447 (1.426)	Data 0.000 (0.026)	Loss 2.282 (2.008)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.687 (0.689)	Data 0.000 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.93078088760376
+==> Statistics for epoch 17: 732 clusters
+Epoch: [17][10/200]	Time 1.394 (1.409)	Data 0.000 (0.062)	Loss 0.613 (0.712)
+Epoch: [17][20/200]	Time 1.440 (1.412)	Data 0.000 (0.031)	Loss 0.819 (0.688)
+Epoch: [17][30/200]	Time 1.404 (1.409)	Data 0.000 (0.021)	Loss 0.684 (0.646)
+Epoch: [17][40/200]	Time 1.367 (1.405)	Data 0.000 (0.016)	Loss 0.696 (0.636)
+Epoch: [17][50/200]	Time 1.352 (1.424)	Data 0.000 (0.035)	Loss 2.833 (0.765)
+Epoch: [17][60/200]	Time 1.324 (1.414)	Data 0.000 (0.029)	Loss 2.586 (1.017)
+Epoch: [17][70/200]	Time 1.409 (1.411)	Data 0.001 (0.025)	Loss 2.368 (1.207)
+Epoch: [17][80/200]	Time 1.438 (1.406)	Data 0.000 (0.022)	Loss 1.805 (1.337)
+Epoch: [17][90/200]	Time 1.398 (1.406)	Data 0.000 (0.019)	Loss 3.264 (1.448)
+Epoch: [17][100/200]	Time 1.400 (1.416)	Data 0.000 (0.028)	Loss 1.909 (1.549)
+Epoch: [17][110/200]	Time 1.381 (1.413)	Data 0.000 (0.026)	Loss 2.543 (1.636)
+Epoch: [17][120/200]	Time 1.454 (1.419)	Data 0.000 (0.024)	Loss 2.634 (1.699)
+Epoch: [17][130/200]	Time 1.489 (1.422)	Data 0.000 (0.022)	Loss 2.295 (1.769)
+Epoch: [17][140/200]	Time 1.446 (1.435)	Data 0.000 (0.031)	Loss 2.293 (1.812)
+Epoch: [17][150/200]	Time 1.412 (1.435)	Data 0.000 (0.029)	Loss 2.425 (1.859)
+Epoch: [17][160/200]	Time 1.476 (1.436)	Data 0.000 (0.027)	Loss 2.523 (1.887)
+Epoch: [17][170/200]	Time 1.388 (1.436)	Data 0.000 (0.026)	Loss 2.509 (1.928)
+Epoch: [17][180/200]	Time 1.434 (1.438)	Data 0.000 (0.024)	Loss 2.396 (1.956)
+Epoch: [17][190/200]	Time 1.558 (1.449)	Data 0.000 (0.031)	Loss 2.335 (1.978)
+Epoch: [17][200/200]	Time 1.399 (1.450)	Data 0.001 (0.029)	Loss 2.264 (2.001)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.665 (0.716)	Data 0.000 (0.020)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.855483531951904
+==> Statistics for epoch 18: 711 clusters
+Epoch: [18][10/200]	Time 1.471 (1.440)	Data 0.000 (0.066)	Loss 0.674 (0.677)
+Epoch: [18][20/200]	Time 1.539 (1.455)	Data 0.000 (0.033)	Loss 0.829 (0.695)
+Epoch: [18][30/200]	Time 1.462 (1.462)	Data 0.000 (0.022)	Loss 0.501 (0.668)
+Epoch: [18][40/200]	Time 1.454 (1.459)	Data 0.000 (0.017)	Loss 0.459 (0.638)
+Epoch: [18][50/200]	Time 1.460 (1.487)	Data 0.000 (0.040)	Loss 2.829 (0.840)
+Epoch: [18][60/200]	Time 1.398 (1.478)	Data 0.000 (0.033)	Loss 2.448 (1.079)
+Epoch: [18][70/200]	Time 1.369 (1.474)	Data 0.000 (0.029)	Loss 2.777 (1.253)
+Epoch: [18][80/200]	Time 1.423 (1.473)	Data 0.001 (0.025)	Loss 2.302 (1.386)
+Epoch: [18][90/200]	Time 1.415 (1.492)	Data 0.000 (0.038)	Loss 1.947 (1.503)
+Epoch: [18][100/200]	Time 1.383 (1.486)	Data 0.000 (0.034)	Loss 2.168 (1.591)
+Epoch: [18][110/200]	Time 1.507 (1.484)	Data 0.000 (0.031)	Loss 2.208 (1.644)
+Epoch: [18][120/200]	Time 1.459 (1.483)	Data 0.000 (0.029)	Loss 2.094 (1.712)
+Epoch: [18][130/200]	Time 1.496 (1.481)	Data 0.000 (0.027)	Loss 3.153 (1.780)
+Epoch: [18][140/200]	Time 1.404 (1.491)	Data 0.000 (0.035)	Loss 2.688 (1.813)
+Epoch: [18][150/200]	Time 1.415 (1.488)	Data 0.000 (0.033)	Loss 2.604 (1.852)
+Epoch: [18][160/200]	Time 1.425 (1.485)	Data 0.001 (0.031)	Loss 2.665 (1.891)
+Epoch: [18][170/200]	Time 1.509 (1.483)	Data 0.000 (0.029)	Loss 2.182 (1.927)
+Epoch: [18][180/200]	Time 1.463 (1.489)	Data 0.000 (0.035)	Loss 2.488 (1.945)
+Epoch: [18][190/200]	Time 1.394 (1.487)	Data 0.000 (0.033)	Loss 1.798 (1.965)
+Epoch: [18][200/200]	Time 1.462 (1.485)	Data 0.000 (0.032)	Loss 2.683 (1.993)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.674 (0.719)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.718764543533325
+==> Statistics for epoch 19: 713 clusters
+Epoch: [19][10/200]	Time 1.442 (1.411)	Data 0.000 (0.062)	Loss 1.015 (0.703)
+Epoch: [19][20/200]	Time 1.407 (1.417)	Data 0.000 (0.031)	Loss 0.476 (0.692)
+Epoch: [19][30/200]	Time 1.475 (1.434)	Data 0.000 (0.021)	Loss 0.673 (0.668)
+Epoch: [19][40/200]	Time 1.409 (1.441)	Data 0.000 (0.016)	Loss 0.421 (0.610)
+Epoch: [19][50/200]	Time 1.495 (1.480)	Data 0.000 (0.043)	Loss 2.158 (0.775)
+Epoch: [19][60/200]	Time 1.476 (1.474)	Data 0.000 (0.036)	Loss 2.519 (0.977)
+Epoch: [19][70/200]	Time 1.362 (1.467)	Data 0.000 (0.031)	Loss 2.445 (1.188)
+Epoch: [19][80/200]	Time 1.452 (1.465)	Data 0.000 (0.027)	Loss 2.767 (1.334)
+Epoch: [19][90/200]	Time 1.462 (1.481)	Data 0.000 (0.040)	Loss 2.298 (1.435)
+Epoch: [19][100/200]	Time 1.436 (1.477)	Data 0.000 (0.036)	Loss 2.094 (1.520)
+Epoch: [19][110/200]	Time 1.497 (1.476)	Data 0.001 (0.033)	Loss 2.396 (1.592)
+Epoch: [19][120/200]	Time 1.467 (1.473)	Data 0.001 (0.030)	Loss 2.146 (1.654)
+Epoch: [19][130/200]	Time 1.461 (1.471)	Data 0.000 (0.028)	Loss 2.439 (1.702)
+Epoch: [19][140/200]	Time 1.467 (1.481)	Data 0.000 (0.037)	Loss 2.301 (1.750)
+Epoch: [19][150/200]	Time 1.452 (1.481)	Data 0.000 (0.034)	Loss 2.494 (1.789)
+Epoch: [19][160/200]	Time 1.365 (1.478)	Data 0.000 (0.032)	Loss 2.582 (1.836)
+Epoch: [19][170/200]	Time 1.509 (1.476)	Data 0.000 (0.030)	Loss 2.660 (1.866)
+Epoch: [19][180/200]	Time 1.512 (1.484)	Data 0.000 (0.037)	Loss 1.772 (1.902)
+Epoch: [19][190/200]	Time 1.385 (1.482)	Data 0.000 (0.035)	Loss 2.922 (1.927)
+Epoch: [19][200/200]	Time 1.503 (1.481)	Data 0.001 (0.033)	Loss 2.332 (1.948)
+Extract Features: [50/78]	Time 0.651 (0.704)	Data 0.000 (0.025)	
+Mean AP: 63.0%
+
+ * Finished epoch  19  model mAP: 63.0%  best: 63.0% *
+
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.663 (0.698)	Data 0.001 (0.017)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 14.658660411834717
+==> Statistics for epoch 20: 705 clusters
+Epoch: [20][10/200]	Time 1.432 (1.446)	Data 0.000 (0.068)	Loss 0.586 (0.603)
+Epoch: [20][20/200]	Time 1.453 (1.425)	Data 0.000 (0.034)	Loss 0.537 (0.596)
+Epoch: [20][30/200]	Time 1.419 (1.424)	Data 0.000 (0.023)	Loss 0.627 (0.581)
+Epoch: [20][40/200]	Time 1.378 (1.418)	Data 0.000 (0.017)	Loss 0.476 (0.586)
+Epoch: [20][50/200]	Time 1.373 (1.450)	Data 0.000 (0.044)	Loss 2.289 (0.755)
+Epoch: [20][60/200]	Time 1.369 (1.445)	Data 0.001 (0.037)	Loss 2.735 (1.004)
+Epoch: [20][70/200]	Time 1.386 (1.444)	Data 0.001 (0.032)	Loss 2.008 (1.155)
+Epoch: [20][80/200]	Time 1.479 (1.445)	Data 0.001 (0.028)	Loss 1.591 (1.248)
+Epoch: [20][90/200]	Time 1.524 (1.468)	Data 0.000 (0.040)	Loss 2.501 (1.335)
+Epoch: [20][100/200]	Time 1.539 (1.467)	Data 0.000 (0.036)	Loss 2.119 (1.403)
+Epoch: [20][110/200]	Time 1.436 (1.465)	Data 0.001 (0.033)	Loss 1.891 (1.453)
+Epoch: [20][120/200]	Time 1.493 (1.464)	Data 0.000 (0.030)	Loss 2.209 (1.495)
+Epoch: [20][130/200]	Time 1.490 (1.464)	Data 0.000 (0.028)	Loss 2.313 (1.528)
+Epoch: [20][140/200]	Time 1.472 (1.477)	Data 0.000 (0.036)	Loss 2.438 (1.558)
+Epoch: [20][150/200]	Time 1.434 (1.473)	Data 0.000 (0.034)	Loss 1.607 (1.578)
+Epoch: [20][160/200]	Time 1.393 (1.472)	Data 0.000 (0.032)	Loss 1.842 (1.602)
+Epoch: [20][170/200]	Time 1.460 (1.471)	Data 0.000 (0.030)	Loss 2.271 (1.607)
+Epoch: [20][180/200]	Time 1.496 (1.480)	Data 0.000 (0.036)	Loss 1.986 (1.627)
+Epoch: [20][190/200]	Time 1.499 (1.481)	Data 0.000 (0.034)	Loss 1.393 (1.637)
+Epoch: [20][200/200]	Time 1.422 (1.476)	Data 0.000 (0.032)	Loss 1.446 (1.647)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.646 (0.692)	Data 0.000 (0.019)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 15.049757719039917
+==> Statistics for epoch 21: 691 clusters
+Epoch: [21][10/200]	Time 1.386 (1.415)	Data 0.000 (0.062)	Loss 0.478 (0.488)
+Epoch: [21][20/200]	Time 1.494 (1.435)	Data 0.000 (0.031)	Loss 0.395 (0.486)
+Epoch: [21][30/200]	Time 1.455 (1.441)	Data 0.000 (0.021)	Loss 0.569 (0.467)
+Epoch: [21][40/200]	Time 1.428 (1.433)	Data 0.000 (0.016)	Loss 0.382 (0.451)
+Epoch: [21][50/200]	Time 1.413 (1.470)	Data 0.000 (0.042)	Loss 1.866 (0.623)
+Epoch: [21][60/200]	Time 1.503 (1.466)	Data 0.001 (0.035)	Loss 1.715 (0.790)
+Epoch: [21][70/200]	Time 1.420 (1.464)	Data 0.000 (0.030)	Loss 2.619 (0.952)
+Epoch: [21][80/200]	Time 1.438 (1.463)	Data 0.000 (0.027)	Loss 1.647 (1.060)
+Epoch: [21][90/200]	Time 1.517 (1.478)	Data 0.000 (0.041)	Loss 1.272 (1.146)
+Epoch: [21][100/200]	Time 1.452 (1.477)	Data 0.000 (0.037)	Loss 1.426 (1.224)
+Epoch: [21][110/200]	Time 1.473 (1.473)	Data 0.001 (0.033)	Loss 1.511 (1.280)
+Epoch: [21][120/200]	Time 1.421 (1.469)	Data 0.000 (0.031)	Loss 1.742 (1.313)
+Epoch: [21][130/200]	Time 2.992 (1.479)	Data 1.530 (0.040)	Loss 1.826 (1.354)
+Epoch: [21][140/200]	Time 1.544 (1.478)	Data 0.000 (0.037)	Loss 2.019 (1.392)
+Epoch: [21][150/200]	Time 1.520 (1.480)	Data 0.000 (0.035)	Loss 2.530 (1.419)
+Epoch: [21][160/200]	Time 1.426 (1.479)	Data 0.000 (0.033)	Loss 2.046 (1.440)
+Epoch: [21][170/200]	Time 1.478 (1.477)	Data 0.000 (0.031)	Loss 2.193 (1.462)
+Epoch: [21][180/200]	Time 1.386 (1.485)	Data 0.000 (0.037)	Loss 1.379 (1.470)
+Epoch: [21][190/200]	Time 1.415 (1.483)	Data 0.001 (0.035)	Loss 1.633 (1.487)
+Epoch: [21][200/200]	Time 1.466 (1.482)	Data 0.000 (0.033)	Loss 2.694 (1.503)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.734 (0.725)	Data 0.001 (0.020)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.883553981781006
+==> Statistics for epoch 22: 697 clusters
+Epoch: [22][10/200]	Time 1.465 (1.509)	Data 0.001 (0.063)	Loss 0.306 (0.403)
+Epoch: [22][20/200]	Time 1.413 (1.503)	Data 0.000 (0.032)	Loss 0.424 (0.426)
+Epoch: [22][30/200]	Time 1.510 (1.504)	Data 0.001 (0.021)	Loss 0.411 (0.415)
+Epoch: [22][40/200]	Time 1.446 (1.498)	Data 0.000 (0.016)	Loss 0.283 (0.401)
+Epoch: [22][50/200]	Time 1.472 (1.536)	Data 0.000 (0.048)	Loss 2.217 (0.587)
+Epoch: [22][60/200]	Time 1.472 (1.527)	Data 0.000 (0.040)	Loss 1.525 (0.796)
+Epoch: [22][70/200]	Time 1.483 (1.526)	Data 0.001 (0.034)	Loss 1.876 (0.972)
+Epoch: [22][80/200]	Time 1.560 (1.522)	Data 0.000 (0.030)	Loss 1.840 (1.064)
+Epoch: [22][90/200]	Time 1.580 (1.535)	Data 0.001 (0.044)	Loss 0.925 (1.141)
+Epoch: [22][100/200]	Time 1.467 (1.531)	Data 0.000 (0.039)	Loss 1.910 (1.208)
+Epoch: [22][110/200]	Time 1.520 (1.526)	Data 0.001 (0.036)	Loss 1.992 (1.258)
+Epoch: [22][120/200]	Time 1.537 (1.525)	Data 0.001 (0.033)	Loss 1.692 (1.309)
+Epoch: [22][130/200]	Time 2.943 (1.532)	Data 1.446 (0.041)	Loss 1.934 (1.348)
+Epoch: [22][140/200]	Time 1.447 (1.531)	Data 0.001 (0.039)	Loss 1.600 (1.383)
+Epoch: [22][150/200]	Time 1.567 (1.529)	Data 0.000 (0.036)	Loss 1.082 (1.413)
+Epoch: [22][160/200]	Time 1.518 (1.529)	Data 0.001 (0.034)	Loss 1.941 (1.439)
+Epoch: [22][170/200]	Time 1.478 (1.527)	Data 0.000 (0.032)	Loss 1.494 (1.451)
+Epoch: [22][180/200]	Time 1.452 (1.532)	Data 0.001 (0.037)	Loss 1.355 (1.466)
+Epoch: [22][190/200]	Time 1.468 (1.529)	Data 0.001 (0.035)	Loss 1.980 (1.483)
+Epoch: [22][200/200]	Time 1.526 (1.527)	Data 0.000 (0.034)	Loss 2.158 (1.498)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.750 (0.760)	Data 0.001 (0.024)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 19.152109622955322
+==> Statistics for epoch 23: 696 clusters
+Epoch: [23][10/200]	Time 1.464 (1.503)	Data 0.000 (0.077)	Loss 0.515 (0.479)
+Epoch: [23][20/200]	Time 1.426 (1.492)	Data 0.001 (0.039)	Loss 0.387 (0.418)
+Epoch: [23][30/200]	Time 1.655 (1.498)	Data 0.001 (0.026)	Loss 0.336 (0.399)
+Epoch: [23][40/200]	Time 1.500 (1.496)	Data 0.000 (0.020)	Loss 0.404 (0.385)
+Epoch: [23][50/200]	Time 1.527 (1.524)	Data 0.001 (0.041)	Loss 1.462 (0.565)
+Epoch: [23][60/200]	Time 1.461 (1.518)	Data 0.001 (0.034)	Loss 2.002 (0.760)
+Epoch: [23][70/200]	Time 1.479 (1.514)	Data 0.001 (0.029)	Loss 1.235 (0.862)
+Epoch: [23][80/200]	Time 1.510 (1.513)	Data 0.000 (0.026)	Loss 1.783 (0.967)
+Epoch: [23][90/200]	Time 1.544 (1.528)	Data 0.000 (0.040)	Loss 1.461 (1.053)
+Epoch: [23][100/200]	Time 1.432 (1.524)	Data 0.001 (0.036)	Loss 1.723 (1.102)
+Epoch: [23][110/200]	Time 1.509 (1.521)	Data 0.001 (0.033)	Loss 1.769 (1.172)
+Epoch: [23][120/200]	Time 1.472 (1.519)	Data 0.001 (0.030)	Loss 1.981 (1.223)
+Epoch: [23][130/200]	Time 3.212 (1.531)	Data 1.598 (0.040)	Loss 1.338 (1.256)
+Epoch: [23][140/200]	Time 1.375 (1.525)	Data 0.001 (0.037)	Loss 1.825 (1.291)
+Epoch: [23][150/200]	Time 1.474 (1.523)	Data 0.001 (0.035)	Loss 2.096 (1.322)
+Epoch: [23][160/200]	Time 1.449 (1.521)	Data 0.001 (0.033)	Loss 2.726 (1.358)
+Epoch: [23][170/200]	Time 1.464 (1.520)	Data 0.000 (0.031)	Loss 1.337 (1.377)
+Epoch: [23][180/200]	Time 1.643 (1.528)	Data 0.001 (0.038)	Loss 1.649 (1.389)
+Epoch: [23][190/200]	Time 1.486 (1.526)	Data 0.001 (0.036)	Loss 1.973 (1.412)
+Epoch: [23][200/200]	Time 1.584 (1.527)	Data 0.001 (0.034)	Loss 1.768 (1.435)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.699 (0.762)	Data 0.001 (0.024)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.688920736312866
+==> Statistics for epoch 24: 706 clusters
+Epoch: [24][10/200]	Time 1.532 (1.521)	Data 0.001 (0.092)	Loss 0.230 (0.445)
+Epoch: [24][20/200]	Time 1.525 (1.512)	Data 0.005 (0.046)	Loss 0.344 (0.421)
+Epoch: [24][30/200]	Time 1.484 (1.510)	Data 0.001 (0.031)	Loss 0.383 (0.403)
+Epoch: [24][40/200]	Time 1.434 (1.500)	Data 0.000 (0.024)	Loss 0.321 (0.377)
+Epoch: [24][50/200]	Time 1.460 (1.528)	Data 0.002 (0.051)	Loss 2.312 (0.528)
+Epoch: [24][60/200]	Time 1.453 (1.518)	Data 0.001 (0.043)	Loss 1.815 (0.716)
+Epoch: [24][70/200]	Time 1.395 (1.515)	Data 0.001 (0.037)	Loss 1.570 (0.849)
+Epoch: [24][80/200]	Time 1.517 (1.513)	Data 0.001 (0.032)	Loss 1.406 (0.947)
+Epoch: [24][90/200]	Time 1.582 (1.530)	Data 0.001 (0.043)	Loss 1.115 (1.043)
+Epoch: [24][100/200]	Time 1.540 (1.527)	Data 0.000 (0.039)	Loss 1.667 (1.149)
+Epoch: [24][110/200]	Time 1.445 (1.524)	Data 0.001 (0.035)	Loss 1.481 (1.204)
+Epoch: [24][120/200]	Time 1.404 (1.522)	Data 0.001 (0.033)	Loss 1.216 (1.239)
+Epoch: [24][130/200]	Time 1.455 (1.515)	Data 0.000 (0.030)	Loss 1.484 (1.278)
+Epoch: [24][140/200]	Time 1.501 (1.522)	Data 0.001 (0.038)	Loss 1.930 (1.298)
+Epoch: [24][150/200]	Time 1.487 (1.521)	Data 0.001 (0.036)	Loss 2.069 (1.327)
+Epoch: [24][160/200]	Time 1.527 (1.519)	Data 0.001 (0.034)	Loss 1.597 (1.347)
+Epoch: [24][170/200]	Time 1.428 (1.517)	Data 0.000 (0.032)	Loss 1.416 (1.363)
+Epoch: [24][180/200]	Time 1.577 (1.525)	Data 0.000 (0.038)	Loss 1.465 (1.371)
+Epoch: [24][190/200]	Time 1.427 (1.523)	Data 0.001 (0.036)	Loss 1.734 (1.388)
+Epoch: [24][200/200]	Time 1.548 (1.523)	Data 0.001 (0.034)	Loss 2.079 (1.393)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.674 (0.762)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.948539972305298
+==> Statistics for epoch 25: 701 clusters
+Epoch: [25][10/200]	Time 1.536 (1.548)	Data 0.001 (0.088)	Loss 0.291 (0.409)
+Epoch: [25][20/200]	Time 1.580 (1.524)	Data 0.000 (0.044)	Loss 0.371 (0.417)
+Epoch: [25][30/200]	Time 1.426 (1.508)	Data 0.000 (0.030)	Loss 0.274 (0.391)
+Epoch: [25][40/200]	Time 1.557 (1.507)	Data 0.000 (0.022)	Loss 0.358 (0.372)
+Epoch: [25][50/200]	Time 1.515 (1.538)	Data 0.000 (0.049)	Loss 1.569 (0.534)
+Epoch: [25][60/200]	Time 1.497 (1.532)	Data 0.001 (0.041)	Loss 1.195 (0.723)
+Epoch: [25][70/200]	Time 1.455 (1.529)	Data 0.000 (0.035)	Loss 1.815 (0.864)
+Epoch: [25][80/200]	Time 1.535 (1.525)	Data 0.000 (0.031)	Loss 1.617 (0.966)
+Epoch: [25][90/200]	Time 1.481 (1.537)	Data 0.000 (0.044)	Loss 1.977 (1.018)
+Epoch: [25][100/200]	Time 1.454 (1.532)	Data 0.001 (0.040)	Loss 1.697 (1.085)
+Epoch: [25][110/200]	Time 1.440 (1.531)	Data 0.001 (0.036)	Loss 2.034 (1.152)
+Epoch: [25][120/200]	Time 1.554 (1.527)	Data 0.001 (0.033)	Loss 1.393 (1.184)
+Epoch: [25][130/200]	Time 2.900 (1.535)	Data 1.342 (0.041)	Loss 1.734 (1.230)
+Epoch: [25][140/200]	Time 1.494 (1.532)	Data 0.000 (0.038)	Loss 1.417 (1.259)
+Epoch: [25][150/200]	Time 1.486 (1.530)	Data 0.001 (0.036)	Loss 1.197 (1.284)
+Epoch: [25][160/200]	Time 1.496 (1.528)	Data 0.001 (0.033)	Loss 1.245 (1.291)
+Epoch: [25][170/200]	Time 1.475 (1.527)	Data 0.000 (0.031)	Loss 2.449 (1.314)
+Epoch: [25][180/200]	Time 1.471 (1.536)	Data 0.000 (0.039)	Loss 1.236 (1.332)
+Epoch: [25][190/200]	Time 1.447 (1.533)	Data 0.001 (0.037)	Loss 1.294 (1.341)
+Epoch: [25][200/200]	Time 1.549 (1.532)	Data 0.000 (0.035)	Loss 1.373 (1.364)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.740 (0.750)	Data 0.000 (0.021)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.683401346206665
+==> Statistics for epoch 26: 709 clusters
+Epoch: [26][10/200]	Time 1.545 (1.533)	Data 0.001 (0.081)	Loss 0.372 (0.386)
+Epoch: [26][20/200]	Time 1.495 (1.522)	Data 0.001 (0.041)	Loss 0.311 (0.395)
+Epoch: [26][30/200]	Time 1.538 (1.511)	Data 0.001 (0.027)	Loss 0.281 (0.359)
+Epoch: [26][40/200]	Time 1.445 (1.511)	Data 0.000 (0.021)	Loss 0.289 (0.354)
+Epoch: [26][50/200]	Time 1.422 (1.543)	Data 0.001 (0.046)	Loss 2.042 (0.488)
+Epoch: [26][60/200]	Time 1.518 (1.538)	Data 0.001 (0.038)	Loss 1.509 (0.692)
+Epoch: [26][70/200]	Time 1.549 (1.532)	Data 0.001 (0.033)	Loss 1.443 (0.833)
+Epoch: [26][80/200]	Time 1.485 (1.528)	Data 0.001 (0.029)	Loss 1.476 (0.920)
+Epoch: [26][90/200]	Time 1.552 (1.544)	Data 0.000 (0.044)	Loss 1.511 (0.991)
+Epoch: [26][100/200]	Time 1.430 (1.539)	Data 0.001 (0.039)	Loss 1.507 (1.047)
+Epoch: [26][110/200]	Time 1.647 (1.537)	Data 0.001 (0.036)	Loss 1.377 (1.077)
+Epoch: [26][120/200]	Time 1.390 (1.533)	Data 0.000 (0.033)	Loss 1.642 (1.132)
+Epoch: [26][130/200]	Time 1.556 (1.533)	Data 0.000 (0.030)	Loss 2.178 (1.189)
+Epoch: [26][140/200]	Time 1.519 (1.540)	Data 0.001 (0.040)	Loss 1.539 (1.223)
+Epoch: [26][150/200]	Time 1.497 (1.537)	Data 0.001 (0.037)	Loss 1.761 (1.247)
+Epoch: [26][160/200]	Time 1.435 (1.534)	Data 0.002 (0.035)	Loss 1.157 (1.270)
+Epoch: [26][170/200]	Time 1.546 (1.533)	Data 0.000 (0.033)	Loss 1.339 (1.295)
+Epoch: [26][180/200]	Time 1.460 (1.541)	Data 0.000 (0.040)	Loss 1.709 (1.307)
+Epoch: [26][190/200]	Time 1.522 (1.540)	Data 0.001 (0.038)	Loss 1.838 (1.317)
+Epoch: [26][200/200]	Time 1.467 (1.538)	Data 0.000 (0.036)	Loss 2.084 (1.332)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.783 (0.768)	Data 0.001 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.864675998687744
+==> Statistics for epoch 27: 708 clusters
+Epoch: [27][10/200]	Time 1.553 (1.569)	Data 0.001 (0.086)	Loss 0.488 (0.410)
+Epoch: [27][20/200]	Time 1.459 (1.535)	Data 0.001 (0.043)	Loss 0.310 (0.368)
+Epoch: [27][30/200]	Time 1.473 (1.510)	Data 0.001 (0.029)	Loss 0.327 (0.358)
+Epoch: [27][40/200]	Time 1.513 (1.507)	Data 0.000 (0.022)	Loss 0.205 (0.340)
+Epoch: [27][50/200]	Time 1.519 (1.533)	Data 0.000 (0.046)	Loss 1.628 (0.479)
+Epoch: [27][60/200]	Time 1.598 (1.524)	Data 0.000 (0.038)	Loss 1.990 (0.658)
+Epoch: [27][70/200]	Time 1.498 (1.517)	Data 0.000 (0.033)	Loss 1.597 (0.781)
+Epoch: [27][80/200]	Time 1.419 (1.513)	Data 0.000 (0.029)	Loss 1.392 (0.885)
+Epoch: [27][90/200]	Time 1.546 (1.529)	Data 0.001 (0.041)	Loss 1.411 (0.967)
+Epoch: [27][100/200]	Time 1.674 (1.524)	Data 0.001 (0.037)	Loss 1.816 (1.034)
+Epoch: [27][110/200]	Time 1.463 (1.519)	Data 0.000 (0.034)	Loss 1.438 (1.067)
+Epoch: [27][120/200]	Time 1.570 (1.518)	Data 0.001 (0.031)	Loss 1.475 (1.108)
+Epoch: [27][130/200]	Time 1.470 (1.515)	Data 0.000 (0.029)	Loss 1.624 (1.156)
+Epoch: [27][140/200]	Time 1.397 (1.524)	Data 0.000 (0.037)	Loss 0.844 (1.167)
+Epoch: [27][150/200]	Time 1.533 (1.520)	Data 0.000 (0.035)	Loss 1.375 (1.192)
+Epoch: [27][160/200]	Time 1.465 (1.520)	Data 0.000 (0.033)	Loss 1.421 (1.215)
+Epoch: [27][170/200]	Time 1.554 (1.520)	Data 0.000 (0.031)	Loss 1.933 (1.246)
+Epoch: [27][180/200]	Time 1.457 (1.526)	Data 0.000 (0.038)	Loss 1.133 (1.264)
+Epoch: [27][190/200]	Time 1.512 (1.525)	Data 0.001 (0.036)	Loss 1.449 (1.281)
+Epoch: [27][200/200]	Time 1.505 (1.526)	Data 0.000 (0.034)	Loss 0.939 (1.291)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.695 (0.760)	Data 0.001 (0.028)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.829246759414673
+==> Statistics for epoch 28: 703 clusters
+Epoch: [28][10/200]	Time 1.433 (1.533)	Data 0.001 (0.103)	Loss 0.390 (0.332)
+Epoch: [28][20/200]	Time 1.432 (1.513)	Data 0.000 (0.051)	Loss 0.314 (0.342)
+Epoch: [28][30/200]	Time 1.423 (1.497)	Data 0.001 (0.035)	Loss 0.478 (0.343)
+Epoch: [28][40/200]	Time 1.498 (1.498)	Data 0.000 (0.026)	Loss 0.249 (0.328)
+Epoch: [28][50/200]	Time 1.488 (1.530)	Data 0.000 (0.055)	Loss 2.506 (0.516)
+Epoch: [28][60/200]	Time 1.498 (1.528)	Data 0.001 (0.046)	Loss 1.870 (0.663)
+Epoch: [28][70/200]	Time 1.511 (1.522)	Data 0.000 (0.040)	Loss 1.694 (0.792)
+Epoch: [28][80/200]	Time 1.397 (1.516)	Data 0.001 (0.035)	Loss 1.818 (0.876)
+Epoch: [28][90/200]	Time 1.413 (1.530)	Data 0.000 (0.049)	Loss 1.667 (0.947)
+Epoch: [28][100/200]	Time 1.481 (1.525)	Data 0.000 (0.044)	Loss 1.546 (1.016)
+Epoch: [28][110/200]	Time 1.470 (1.519)	Data 0.000 (0.040)	Loss 1.503 (1.051)
+Epoch: [28][120/200]	Time 1.543 (1.519)	Data 0.001 (0.037)	Loss 1.502 (1.104)
+Epoch: [28][130/200]	Time 3.090 (1.530)	Data 1.522 (0.046)	Loss 1.161 (1.137)
+Epoch: [28][140/200]	Time 1.443 (1.525)	Data 0.001 (0.043)	Loss 1.757 (1.166)
+Epoch: [28][150/200]	Time 1.522 (1.522)	Data 0.000 (0.040)	Loss 1.728 (1.205)
+Epoch: [28][160/200]	Time 1.557 (1.519)	Data 0.000 (0.037)	Loss 1.539 (1.232)
+Epoch: [28][170/200]	Time 1.501 (1.519)	Data 0.000 (0.035)	Loss 1.377 (1.244)
+Epoch: [28][180/200]	Time 1.489 (1.526)	Data 0.001 (0.042)	Loss 1.815 (1.244)
+Epoch: [28][190/200]	Time 1.613 (1.525)	Data 0.001 (0.040)	Loss 1.986 (1.261)
+Epoch: [28][200/200]	Time 1.427 (1.524)	Data 0.001 (0.038)	Loss 1.711 (1.279)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.736 (0.761)	Data 0.000 (0.029)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.283417463302612
+==> Statistics for epoch 29: 706 clusters
+Epoch: [29][10/200]	Time 1.527 (1.553)	Data 0.001 (0.089)	Loss 0.334 (0.347)
+Epoch: [29][20/200]	Time 1.471 (1.524)	Data 0.001 (0.045)	Loss 0.190 (0.339)
+Epoch: [29][30/200]	Time 1.570 (1.515)	Data 0.001 (0.030)	Loss 0.335 (0.338)
+Epoch: [29][40/200]	Time 1.439 (1.517)	Data 0.000 (0.023)	Loss 0.187 (0.326)
+Epoch: [29][50/200]	Time 1.546 (1.551)	Data 0.001 (0.051)	Loss 1.717 (0.467)
+Epoch: [29][60/200]	Time 1.539 (1.545)	Data 0.001 (0.043)	Loss 1.426 (0.599)
+Epoch: [29][70/200]	Time 1.459 (1.534)	Data 0.001 (0.037)	Loss 1.439 (0.734)
+Epoch: [29][80/200]	Time 1.379 (1.522)	Data 0.001 (0.032)	Loss 1.497 (0.837)
+Epoch: [29][90/200]	Time 1.525 (1.529)	Data 0.001 (0.045)	Loss 1.516 (0.915)
+Epoch: [29][100/200]	Time 1.522 (1.524)	Data 0.001 (0.040)	Loss 1.622 (0.971)
+Epoch: [29][110/200]	Time 1.465 (1.520)	Data 0.000 (0.037)	Loss 1.425 (1.018)
+Epoch: [29][120/200]	Time 1.619 (1.518)	Data 0.001 (0.034)	Loss 1.302 (1.062)
+Epoch: [29][130/200]	Time 1.424 (1.515)	Data 0.000 (0.031)	Loss 1.519 (1.101)
+Epoch: [29][140/200]	Time 1.467 (1.525)	Data 0.001 (0.039)	Loss 1.070 (1.116)
+Epoch: [29][150/200]	Time 1.470 (1.523)	Data 0.001 (0.036)	Loss 1.975 (1.140)
+Epoch: [29][160/200]	Time 1.485 (1.522)	Data 0.000 (0.034)	Loss 1.199 (1.158)
+Epoch: [29][170/200]	Time 1.463 (1.521)	Data 0.000 (0.032)	Loss 1.638 (1.185)
+Epoch: [29][180/200]	Time 1.473 (1.528)	Data 0.001 (0.038)	Loss 2.351 (1.208)
+Epoch: [29][190/200]	Time 1.604 (1.527)	Data 0.000 (0.036)	Loss 1.072 (1.218)
+Epoch: [29][200/200]	Time 1.480 (1.526)	Data 0.000 (0.035)	Loss 1.446 (1.226)
+Extract Features: [50/78]	Time 0.631 (0.746)	Data 0.000 (0.024)	
+Mean AP: 72.6%
+
+ * Finished epoch  29  model mAP: 72.6%  best: 72.6% *
+
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.703 (0.756)	Data 0.001 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.868141174316406
+==> Statistics for epoch 30: 707 clusters
+Epoch: [30][10/200]	Time 1.427 (1.551)	Data 0.001 (0.100)	Loss 0.289 (0.381)
+Epoch: [30][20/200]	Time 1.489 (1.518)	Data 0.000 (0.050)	Loss 0.362 (0.349)
+Epoch: [30][30/200]	Time 1.524 (1.501)	Data 0.000 (0.034)	Loss 0.256 (0.346)
+Epoch: [30][40/200]	Time 1.470 (1.496)	Data 0.000 (0.025)	Loss 0.405 (0.336)
+Epoch: [30][50/200]	Time 1.484 (1.525)	Data 0.001 (0.049)	Loss 1.924 (0.479)
+Epoch: [30][60/200]	Time 1.447 (1.520)	Data 0.000 (0.041)	Loss 1.350 (0.670)
+Epoch: [30][70/200]	Time 1.497 (1.514)	Data 0.001 (0.035)	Loss 1.212 (0.770)
+Epoch: [30][80/200]	Time 1.490 (1.511)	Data 0.001 (0.031)	Loss 1.348 (0.854)
+Epoch: [30][90/200]	Time 1.495 (1.526)	Data 0.001 (0.047)	Loss 1.959 (0.928)
+Epoch: [30][100/200]	Time 1.462 (1.521)	Data 0.001 (0.042)	Loss 1.806 (1.003)
+Epoch: [30][110/200]	Time 1.509 (1.521)	Data 0.001 (0.038)	Loss 2.187 (1.052)
+Epoch: [30][120/200]	Time 1.462 (1.517)	Data 0.001 (0.035)	Loss 1.150 (1.089)
+Epoch: [30][130/200]	Time 1.449 (1.515)	Data 0.000 (0.033)	Loss 1.484 (1.130)
+Epoch: [30][140/200]	Time 1.392 (1.523)	Data 0.000 (0.040)	Loss 1.627 (1.148)
+Epoch: [30][150/200]	Time 1.450 (1.520)	Data 0.001 (0.038)	Loss 1.574 (1.178)
+Epoch: [30][160/200]	Time 1.511 (1.517)	Data 0.000 (0.035)	Loss 1.127 (1.203)
+Epoch: [30][170/200]	Time 1.584 (1.517)	Data 0.000 (0.033)	Loss 1.478 (1.222)
+Epoch: [30][180/200]	Time 1.502 (1.523)	Data 0.001 (0.039)	Loss 1.163 (1.238)
+Epoch: [30][190/200]	Time 1.501 (1.520)	Data 0.001 (0.037)	Loss 1.051 (1.247)
+Epoch: [30][200/200]	Time 1.455 (1.519)	Data 0.001 (0.035)	Loss 1.580 (1.259)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.710 (0.749)	Data 0.000 (0.022)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.360158920288086
+==> Statistics for epoch 31: 704 clusters
+Epoch: [31][10/200]	Time 1.476 (1.546)	Data 0.001 (0.095)	Loss 0.665 (0.375)
+Epoch: [31][20/200]	Time 1.392 (1.500)	Data 0.001 (0.048)	Loss 0.509 (0.382)
+Epoch: [31][30/200]	Time 1.529 (1.493)	Data 0.000 (0.032)	Loss 0.299 (0.344)
+Epoch: [31][40/200]	Time 1.545 (1.496)	Data 0.000 (0.024)	Loss 0.277 (0.331)
+Epoch: [31][50/200]	Time 1.523 (1.525)	Data 0.001 (0.049)	Loss 1.018 (0.490)
+Epoch: [31][60/200]	Time 1.489 (1.518)	Data 0.001 (0.041)	Loss 1.256 (0.655)
+Epoch: [31][70/200]	Time 1.502 (1.513)	Data 0.001 (0.035)	Loss 1.464 (0.771)
+Epoch: [31][80/200]	Time 1.473 (1.508)	Data 0.000 (0.031)	Loss 1.405 (0.859)
+Epoch: [31][90/200]	Time 1.460 (1.527)	Data 0.000 (0.045)	Loss 1.429 (0.916)
+Epoch: [31][100/200]	Time 1.429 (1.523)	Data 0.001 (0.041)	Loss 1.282 (0.971)
+Epoch: [31][110/200]	Time 1.546 (1.521)	Data 0.001 (0.037)	Loss 1.622 (1.012)
+Epoch: [31][120/200]	Time 1.463 (1.518)	Data 0.000 (0.034)	Loss 1.525 (1.053)
+Epoch: [31][130/200]	Time 1.477 (1.514)	Data 0.000 (0.032)	Loss 2.025 (1.084)
+Epoch: [31][140/200]	Time 1.558 (1.523)	Data 0.000 (0.040)	Loss 1.567 (1.102)
+Epoch: [31][150/200]	Time 1.446 (1.518)	Data 0.001 (0.037)	Loss 1.017 (1.134)
+Epoch: [31][160/200]	Time 1.440 (1.512)	Data 0.000 (0.035)	Loss 0.997 (1.151)
+Epoch: [31][170/200]	Time 1.518 (1.507)	Data 0.000 (0.033)	Loss 1.806 (1.169)
+Epoch: [31][180/200]	Time 1.481 (1.515)	Data 0.001 (0.040)	Loss 2.094 (1.198)
+Epoch: [31][190/200]	Time 1.517 (1.514)	Data 0.001 (0.037)	Loss 1.487 (1.217)
+Epoch: [31][200/200]	Time 1.548 (1.513)	Data 0.000 (0.036)	Loss 1.185 (1.225)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.780 (0.767)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.6100070476532
+==> Statistics for epoch 32: 712 clusters
+Epoch: [32][10/200]	Time 1.530 (1.539)	Data 0.000 (0.075)	Loss 0.368 (0.372)
+Epoch: [32][20/200]	Time 1.529 (1.517)	Data 0.001 (0.038)	Loss 0.232 (0.349)
+Epoch: [32][30/200]	Time 1.579 (1.515)	Data 0.001 (0.026)	Loss 0.199 (0.343)
+Epoch: [32][40/200]	Time 1.497 (1.512)	Data 0.000 (0.019)	Loss 0.113 (0.311)
+Epoch: [32][50/200]	Time 1.489 (1.541)	Data 0.001 (0.046)	Loss 1.642 (0.427)
+Epoch: [32][60/200]	Time 1.431 (1.530)	Data 0.000 (0.038)	Loss 1.189 (0.580)
+Epoch: [32][70/200]	Time 1.499 (1.528)	Data 0.000 (0.033)	Loss 1.331 (0.699)
+Epoch: [32][80/200]	Time 1.506 (1.523)	Data 0.000 (0.029)	Loss 1.453 (0.793)
+Epoch: [32][90/200]	Time 1.489 (1.540)	Data 0.001 (0.042)	Loss 2.068 (0.875)
+Epoch: [32][100/200]	Time 1.513 (1.537)	Data 0.001 (0.038)	Loss 1.396 (0.906)
+Epoch: [32][110/200]	Time 1.492 (1.533)	Data 0.000 (0.035)	Loss 1.632 (0.940)
+Epoch: [32][120/200]	Time 1.438 (1.527)	Data 0.001 (0.032)	Loss 1.250 (0.976)
+Epoch: [32][130/200]	Time 1.482 (1.524)	Data 0.000 (0.029)	Loss 2.097 (1.024)
+Epoch: [32][140/200]	Time 1.554 (1.533)	Data 0.000 (0.038)	Loss 1.642 (1.049)
+Epoch: [32][150/200]	Time 1.518 (1.530)	Data 0.001 (0.036)	Loss 1.272 (1.068)
+Epoch: [32][160/200]	Time 1.513 (1.529)	Data 0.000 (0.033)	Loss 1.077 (1.091)
+Epoch: [32][170/200]	Time 1.534 (1.526)	Data 0.000 (0.031)	Loss 1.136 (1.114)
+Epoch: [32][180/200]	Time 1.543 (1.531)	Data 0.000 (0.038)	Loss 2.005 (1.132)
+Epoch: [32][190/200]	Time 1.573 (1.530)	Data 0.001 (0.036)	Loss 1.313 (1.155)
+Epoch: [32][200/200]	Time 1.438 (1.528)	Data 0.000 (0.035)	Loss 1.748 (1.172)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.715 (0.768)	Data 0.000 (0.025)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.664198875427246
+==> Statistics for epoch 33: 706 clusters
+Epoch: [33][10/200]	Time 1.469 (1.558)	Data 0.001 (0.097)	Loss 0.267 (0.382)
+Epoch: [33][20/200]	Time 1.488 (1.534)	Data 0.000 (0.049)	Loss 0.280 (0.336)
+Epoch: [33][30/200]	Time 1.498 (1.519)	Data 0.000 (0.033)	Loss 0.206 (0.302)
+Epoch: [33][40/200]	Time 1.497 (1.509)	Data 0.000 (0.025)	Loss 0.246 (0.280)
+Epoch: [33][50/200]	Time 1.438 (1.541)	Data 0.000 (0.051)	Loss 1.572 (0.409)
+Epoch: [33][60/200]	Time 1.581 (1.540)	Data 0.000 (0.043)	Loss 1.038 (0.568)
+Epoch: [33][70/200]	Time 1.509 (1.534)	Data 0.000 (0.037)	Loss 1.025 (0.680)
+Epoch: [33][80/200]	Time 1.529 (1.531)	Data 0.001 (0.032)	Loss 1.297 (0.763)
+Epoch: [33][90/200]	Time 1.533 (1.542)	Data 0.000 (0.044)	Loss 1.036 (0.825)
+Epoch: [33][100/200]	Time 1.447 (1.539)	Data 0.001 (0.040)	Loss 1.172 (0.888)
+Epoch: [33][110/200]	Time 1.487 (1.536)	Data 0.001 (0.036)	Loss 1.013 (0.943)
+Epoch: [33][120/200]	Time 1.474 (1.534)	Data 0.001 (0.034)	Loss 1.628 (0.983)
+Epoch: [33][130/200]	Time 1.560 (1.532)	Data 0.000 (0.031)	Loss 1.767 (1.022)
+Epoch: [33][140/200]	Time 1.442 (1.540)	Data 0.001 (0.040)	Loss 0.871 (1.036)
+Epoch: [33][150/200]	Time 1.487 (1.539)	Data 0.001 (0.038)	Loss 1.054 (1.059)
+Epoch: [33][160/200]	Time 1.547 (1.536)	Data 0.001 (0.035)	Loss 1.600 (1.092)
+Epoch: [33][170/200]	Time 1.522 (1.533)	Data 0.000 (0.033)	Loss 1.661 (1.119)
+Epoch: [33][180/200]	Time 1.531 (1.541)	Data 0.002 (0.040)	Loss 1.372 (1.130)
+Epoch: [33][190/200]	Time 1.429 (1.538)	Data 0.001 (0.038)	Loss 1.560 (1.149)
+Epoch: [33][200/200]	Time 1.494 (1.534)	Data 0.000 (0.036)	Loss 1.160 (1.161)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.723 (0.765)	Data 0.001 (0.025)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.507259368896484
+==> Statistics for epoch 34: 706 clusters
+Epoch: [34][10/200]	Time 1.482 (1.542)	Data 0.000 (0.093)	Loss 0.357 (0.320)
+Epoch: [34][20/200]	Time 1.478 (1.509)	Data 0.000 (0.047)	Loss 0.221 (0.298)
+Epoch: [34][30/200]	Time 1.491 (1.502)	Data 0.000 (0.031)	Loss 0.312 (0.307)
+Epoch: [34][40/200]	Time 1.480 (1.504)	Data 0.001 (0.024)	Loss 0.231 (0.300)
+Epoch: [34][50/200]	Time 1.597 (1.536)	Data 0.001 (0.049)	Loss 2.004 (0.441)
+Epoch: [34][60/200]	Time 1.480 (1.533)	Data 0.001 (0.041)	Loss 1.698 (0.610)
+Epoch: [34][70/200]	Time 1.457 (1.529)	Data 0.001 (0.035)	Loss 1.372 (0.724)
+Epoch: [34][80/200]	Time 1.513 (1.526)	Data 0.000 (0.031)	Loss 1.340 (0.829)
+Epoch: [34][90/200]	Time 1.540 (1.537)	Data 0.001 (0.043)	Loss 1.628 (0.881)
+Epoch: [34][100/200]	Time 1.507 (1.534)	Data 0.001 (0.038)	Loss 1.450 (0.934)
+Epoch: [34][110/200]	Time 1.473 (1.528)	Data 0.000 (0.035)	Loss 1.298 (0.988)
+Epoch: [34][120/200]	Time 1.533 (1.525)	Data 0.001 (0.032)	Loss 1.765 (1.024)
+Epoch: [34][130/200]	Time 1.557 (1.521)	Data 0.000 (0.030)	Loss 1.266 (1.049)
+Epoch: [34][140/200]	Time 1.433 (1.532)	Data 0.000 (0.039)	Loss 1.714 (1.082)
+Epoch: [34][150/200]	Time 1.551 (1.531)	Data 0.001 (0.037)	Loss 0.973 (1.110)
+Epoch: [34][160/200]	Time 1.463 (1.528)	Data 0.001 (0.035)	Loss 1.836 (1.130)
+Epoch: [34][170/200]	Time 1.557 (1.526)	Data 0.000 (0.033)	Loss 1.599 (1.144)
+Epoch: [34][180/200]	Time 1.462 (1.534)	Data 0.000 (0.040)	Loss 1.328 (1.152)
+Epoch: [34][190/200]	Time 1.511 (1.532)	Data 0.000 (0.038)	Loss 0.841 (1.161)
+Epoch: [34][200/200]	Time 1.549 (1.530)	Data 0.001 (0.036)	Loss 1.052 (1.179)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.741 (0.764)	Data 0.000 (0.025)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.90600275993347
+==> Statistics for epoch 35: 711 clusters
+Epoch: [35][10/200]	Time 1.541 (1.540)	Data 0.001 (0.077)	Loss 0.335 (0.333)
+Epoch: [35][20/200]	Time 1.445 (1.503)	Data 0.000 (0.039)	Loss 0.243 (0.336)
+Epoch: [35][30/200]	Time 1.452 (1.499)	Data 0.000 (0.026)	Loss 0.313 (0.339)
+Epoch: [35][40/200]	Time 1.546 (1.490)	Data 0.000 (0.020)	Loss 0.092 (0.308)
+Epoch: [35][50/200]	Time 1.540 (1.520)	Data 0.000 (0.042)	Loss 0.923 (0.410)
+Epoch: [35][60/200]	Time 1.488 (1.515)	Data 0.001 (0.035)	Loss 1.809 (0.603)
+Epoch: [35][70/200]	Time 1.506 (1.512)	Data 0.000 (0.030)	Loss 1.655 (0.720)
+Epoch: [35][80/200]	Time 1.444 (1.508)	Data 0.001 (0.027)	Loss 1.389 (0.801)
+Epoch: [35][90/200]	Time 1.464 (1.524)	Data 0.001 (0.041)	Loss 1.644 (0.857)
+Epoch: [35][100/200]	Time 1.512 (1.524)	Data 0.000 (0.037)	Loss 1.162 (0.904)
+Epoch: [35][110/200]	Time 1.506 (1.521)	Data 0.000 (0.033)	Loss 1.020 (0.931)
+Epoch: [35][120/200]	Time 1.495 (1.518)	Data 0.001 (0.031)	Loss 1.300 (0.959)
+Epoch: [35][130/200]	Time 1.462 (1.514)	Data 0.000 (0.028)	Loss 0.808 (0.991)
+Epoch: [35][140/200]	Time 1.514 (1.523)	Data 0.001 (0.037)	Loss 2.218 (1.023)
+Epoch: [35][150/200]	Time 1.515 (1.522)	Data 0.000 (0.034)	Loss 1.523 (1.039)
+Epoch: [35][160/200]	Time 1.497 (1.521)	Data 0.000 (0.032)	Loss 1.645 (1.053)
+Epoch: [35][170/200]	Time 1.522 (1.519)	Data 0.000 (0.030)	Loss 1.262 (1.077)
+Epoch: [35][180/200]	Time 1.476 (1.526)	Data 0.001 (0.037)	Loss 1.861 (1.088)
+Epoch: [35][190/200]	Time 1.504 (1.526)	Data 0.001 (0.036)	Loss 1.203 (1.100)
+Epoch: [35][200/200]	Time 1.547 (1.524)	Data 0.000 (0.034)	Loss 1.681 (1.106)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.728 (0.763)	Data 0.000 (0.024)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.800352096557617
+==> Statistics for epoch 36: 707 clusters
+Epoch: [36][10/200]	Time 1.458 (1.536)	Data 0.000 (0.088)	Loss 0.225 (0.317)
+Epoch: [36][20/200]	Time 1.406 (1.498)	Data 0.001 (0.044)	Loss 0.289 (0.288)
+Epoch: [36][30/200]	Time 1.540 (1.486)	Data 0.001 (0.030)	Loss 0.329 (0.287)
+Epoch: [36][40/200]	Time 1.509 (1.484)	Data 0.000 (0.022)	Loss 0.391 (0.286)
+Epoch: [36][50/200]	Time 1.514 (1.517)	Data 0.001 (0.051)	Loss 1.101 (0.414)
+Epoch: [36][60/200]	Time 1.507 (1.517)	Data 0.000 (0.042)	Loss 0.876 (0.551)
+Epoch: [36][70/200]	Time 1.428 (1.511)	Data 0.001 (0.036)	Loss 1.271 (0.665)
+Epoch: [36][80/200]	Time 1.539 (1.509)	Data 0.001 (0.032)	Loss 1.460 (0.761)
+Epoch: [36][90/200]	Time 1.569 (1.524)	Data 0.001 (0.046)	Loss 1.492 (0.837)
+Epoch: [36][100/200]	Time 1.440 (1.520)	Data 0.001 (0.041)	Loss 1.411 (0.891)
+Epoch: [36][110/200]	Time 1.505 (1.520)	Data 0.000 (0.037)	Loss 1.891 (0.945)
+Epoch: [36][120/200]	Time 1.457 (1.515)	Data 0.001 (0.034)	Loss 1.204 (0.973)
+Epoch: [36][130/200]	Time 1.530 (1.513)	Data 0.000 (0.032)	Loss 1.264 (1.003)
+Epoch: [36][140/200]	Time 1.526 (1.521)	Data 0.000 (0.041)	Loss 1.403 (1.032)
+Epoch: [36][150/200]	Time 1.409 (1.520)	Data 0.001 (0.038)	Loss 1.172 (1.059)
+Epoch: [36][160/200]	Time 1.527 (1.519)	Data 0.001 (0.036)	Loss 1.757 (1.077)
+Epoch: [36][170/200]	Time 1.436 (1.517)	Data 0.000 (0.034)	Loss 1.393 (1.095)
+Epoch: [36][180/200]	Time 1.491 (1.523)	Data 0.000 (0.041)	Loss 1.237 (1.102)
+Epoch: [36][190/200]	Time 1.524 (1.521)	Data 0.000 (0.039)	Loss 1.552 (1.114)
+Epoch: [36][200/200]	Time 1.494 (1.521)	Data 0.000 (0.037)	Loss 1.329 (1.128)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.683 (0.759)	Data 0.000 (0.024)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.31700587272644
+==> Statistics for epoch 37: 706 clusters
+Epoch: [37][10/200]	Time 1.467 (1.505)	Data 0.001 (0.085)	Loss 0.471 (0.373)
+Epoch: [37][20/200]	Time 1.529 (1.486)	Data 0.000 (0.043)	Loss 0.228 (0.329)
+Epoch: [37][30/200]	Time 1.527 (1.491)	Data 0.001 (0.029)	Loss 0.170 (0.309)
+Epoch: [37][40/200]	Time 1.470 (1.490)	Data 0.000 (0.022)	Loss 0.187 (0.296)
+Epoch: [37][50/200]	Time 1.494 (1.522)	Data 0.000 (0.047)	Loss 1.566 (0.425)
+Epoch: [37][60/200]	Time 1.441 (1.513)	Data 0.001 (0.039)	Loss 1.560 (0.576)
+Epoch: [37][70/200]	Time 1.515 (1.511)	Data 0.000 (0.033)	Loss 1.020 (0.659)
+Epoch: [37][80/200]	Time 1.483 (1.511)	Data 0.000 (0.029)	Loss 1.387 (0.751)
+Epoch: [37][90/200]	Time 1.467 (1.527)	Data 0.001 (0.043)	Loss 1.113 (0.813)
+Epoch: [37][100/200]	Time 1.557 (1.522)	Data 0.000 (0.039)	Loss 1.262 (0.858)
+Epoch: [37][110/200]	Time 1.466 (1.520)	Data 0.001 (0.035)	Loss 1.647 (0.896)
+Epoch: [37][120/200]	Time 1.481 (1.515)	Data 0.001 (0.032)	Loss 1.893 (0.932)
+Epoch: [37][130/200]	Time 1.462 (1.514)	Data 0.000 (0.030)	Loss 1.224 (0.956)
+Epoch: [37][140/200]	Time 1.530 (1.524)	Data 0.001 (0.039)	Loss 1.523 (0.990)
+Epoch: [37][150/200]	Time 1.534 (1.522)	Data 0.000 (0.036)	Loss 1.188 (1.003)
+Epoch: [37][160/200]	Time 1.491 (1.521)	Data 0.001 (0.034)	Loss 1.074 (1.026)
+Epoch: [37][170/200]	Time 1.543 (1.520)	Data 0.000 (0.032)	Loss 1.735 (1.040)
+Epoch: [37][180/200]	Time 1.489 (1.528)	Data 0.000 (0.039)	Loss 1.234 (1.052)
+Epoch: [37][190/200]	Time 1.492 (1.524)	Data 0.000 (0.037)	Loss 1.391 (1.072)
+Epoch: [37][200/200]	Time 1.494 (1.523)	Data 0.001 (0.035)	Loss 1.423 (1.082)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.714 (0.752)	Data 0.000 (0.024)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.677807807922363
+==> Statistics for epoch 38: 705 clusters
+Epoch: [38][10/200]	Time 1.448 (1.539)	Data 0.001 (0.092)	Loss 0.255 (0.290)
+Epoch: [38][20/200]	Time 1.487 (1.516)	Data 0.001 (0.046)	Loss 0.307 (0.276)
+Epoch: [38][30/200]	Time 1.537 (1.510)	Data 0.000 (0.031)	Loss 0.283 (0.269)
+Epoch: [38][40/200]	Time 1.509 (1.507)	Data 0.000 (0.023)	Loss 0.229 (0.274)
+Epoch: [38][50/200]	Time 1.522 (1.538)	Data 0.000 (0.046)	Loss 0.837 (0.394)
+Epoch: [38][60/200]	Time 1.529 (1.533)	Data 0.000 (0.038)	Loss 1.784 (0.536)
+Epoch: [38][70/200]	Time 1.421 (1.527)	Data 0.000 (0.033)	Loss 1.042 (0.652)
+Epoch: [38][80/200]	Time 1.471 (1.521)	Data 0.001 (0.029)	Loss 1.652 (0.731)
+Epoch: [38][90/200]	Time 1.499 (1.540)	Data 0.000 (0.043)	Loss 1.140 (0.798)
+Epoch: [38][100/200]	Time 1.482 (1.536)	Data 0.000 (0.039)	Loss 0.932 (0.841)
+Epoch: [38][110/200]	Time 1.543 (1.533)	Data 0.001 (0.036)	Loss 1.229 (0.898)
+Epoch: [38][120/200]	Time 1.466 (1.527)	Data 0.001 (0.033)	Loss 1.567 (0.933)
+Epoch: [38][130/200]	Time 1.485 (1.525)	Data 0.000 (0.030)	Loss 1.127 (0.963)
+Epoch: [38][140/200]	Time 1.495 (1.534)	Data 0.001 (0.039)	Loss 1.131 (0.987)
+Epoch: [38][150/200]	Time 1.554 (1.532)	Data 0.000 (0.036)	Loss 1.190 (1.004)
+Epoch: [38][160/200]	Time 1.419 (1.529)	Data 0.000 (0.034)	Loss 1.193 (1.021)
+Epoch: [38][170/200]	Time 1.533 (1.527)	Data 0.000 (0.032)	Loss 1.320 (1.038)
+Epoch: [38][180/200]	Time 1.353 (1.531)	Data 0.001 (0.039)	Loss 1.485 (1.055)
+Epoch: [38][190/200]	Time 1.425 (1.525)	Data 0.000 (0.037)	Loss 1.453 (1.074)
+Epoch: [38][200/200]	Time 1.481 (1.521)	Data 0.001 (0.035)	Loss 1.704 (1.088)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.763 (0.760)	Data 0.000 (0.022)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 16.77077865600586
+==> Statistics for epoch 39: 705 clusters
+Epoch: [39][10/200]	Time 1.478 (1.548)	Data 0.000 (0.079)	Loss 0.262 (0.300)
+Epoch: [39][20/200]	Time 1.346 (1.512)	Data 0.000 (0.040)	Loss 0.248 (0.278)
+Epoch: [39][30/200]	Time 1.524 (1.507)	Data 0.000 (0.027)	Loss 0.190 (0.278)
+Epoch: [39][40/200]	Time 1.430 (1.502)	Data 0.000 (0.020)	Loss 0.167 (0.260)
+Epoch: [39][50/200]	Time 1.502 (1.533)	Data 0.000 (0.048)	Loss 1.191 (0.381)
+Epoch: [39][60/200]	Time 1.565 (1.528)	Data 0.000 (0.040)	Loss 1.392 (0.537)
+Epoch: [39][70/200]	Time 1.561 (1.522)	Data 0.000 (0.034)	Loss 1.298 (0.637)
+Epoch: [39][80/200]	Time 1.450 (1.514)	Data 0.000 (0.030)	Loss 1.191 (0.726)
+Epoch: [39][90/200]	Time 1.543 (1.529)	Data 0.001 (0.044)	Loss 1.404 (0.788)
+Epoch: [39][100/200]	Time 1.491 (1.527)	Data 0.001 (0.039)	Loss 1.618 (0.845)
+Epoch: [39][110/200]	Time 1.539 (1.523)	Data 0.001 (0.036)	Loss 0.901 (0.894)
+Epoch: [39][120/200]	Time 1.493 (1.520)	Data 0.000 (0.033)	Loss 1.335 (0.923)
+Epoch: [39][130/200]	Time 1.552 (1.519)	Data 0.000 (0.030)	Loss 1.366 (0.950)
+Epoch: [39][140/200]	Time 1.493 (1.530)	Data 0.000 (0.040)	Loss 1.814 (0.975)
+Epoch: [39][150/200]	Time 1.416 (1.525)	Data 0.000 (0.038)	Loss 0.962 (0.991)
+Epoch: [39][160/200]	Time 1.520 (1.523)	Data 0.001 (0.035)	Loss 1.011 (1.007)
+Epoch: [39][170/200]	Time 1.473 (1.521)	Data 0.000 (0.033)	Loss 2.311 (1.035)
+Epoch: [39][180/200]	Time 1.466 (1.528)	Data 0.000 (0.040)	Loss 1.527 (1.049)
+Epoch: [39][190/200]	Time 1.494 (1.527)	Data 0.000 (0.038)	Loss 1.668 (1.056)
+Epoch: [39][200/200]	Time 1.437 (1.525)	Data 0.000 (0.036)	Loss 1.719 (1.066)
+Extract Features: [50/78]	Time 0.743 (0.759)	Data 0.000 (0.026)	
+Mean AP: 73.2%
+
+ * Finished epoch  39  model mAP: 73.2%  best: 73.2% *
+
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.753 (0.747)	Data 0.000 (0.020)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.57792377471924
+==> Statistics for epoch 40: 698 clusters
+Epoch: [40][10/200]	Time 1.508 (1.535)	Data 0.000 (0.092)	Loss 0.230 (0.307)
+Epoch: [40][20/200]	Time 1.454 (1.507)	Data 0.000 (0.046)	Loss 0.349 (0.304)
+Epoch: [40][30/200]	Time 1.450 (1.503)	Data 0.000 (0.031)	Loss 0.252 (0.287)
+Epoch: [40][40/200]	Time 1.494 (1.503)	Data 0.000 (0.023)	Loss 0.208 (0.281)
+Epoch: [40][50/200]	Time 1.479 (1.533)	Data 0.000 (0.047)	Loss 1.018 (0.411)
+Epoch: [40][60/200]	Time 1.542 (1.525)	Data 0.000 (0.039)	Loss 1.040 (0.542)
+Epoch: [40][70/200]	Time 1.513 (1.522)	Data 0.001 (0.034)	Loss 1.345 (0.628)
+Epoch: [40][80/200]	Time 1.504 (1.518)	Data 0.000 (0.030)	Loss 1.126 (0.696)
+Epoch: [40][90/200]	Time 1.401 (1.531)	Data 0.000 (0.043)	Loss 0.956 (0.757)
+Epoch: [40][100/200]	Time 1.454 (1.527)	Data 0.001 (0.039)	Loss 0.761 (0.803)
+Epoch: [40][110/200]	Time 1.541 (1.522)	Data 0.001 (0.035)	Loss 1.604 (0.833)
+Epoch: [40][120/200]	Time 1.433 (1.520)	Data 0.001 (0.033)	Loss 1.169 (0.861)
+Epoch: [40][130/200]	Time 3.209 (1.531)	Data 1.672 (0.043)	Loss 0.910 (0.899)
+Epoch: [40][140/200]	Time 1.453 (1.530)	Data 0.001 (0.040)	Loss 0.776 (0.914)
+Epoch: [40][150/200]	Time 1.469 (1.528)	Data 0.001 (0.037)	Loss 1.231 (0.938)
+Epoch: [40][160/200]	Time 1.463 (1.526)	Data 0.001 (0.035)	Loss 1.141 (0.956)
+Epoch: [40][170/200]	Time 1.578 (1.525)	Data 0.000 (0.033)	Loss 1.077 (0.971)
+Epoch: [40][180/200]	Time 1.567 (1.534)	Data 0.000 (0.040)	Loss 1.830 (0.979)
+Epoch: [40][190/200]	Time 1.496 (1.532)	Data 0.001 (0.038)	Loss 1.265 (0.999)
+Epoch: [40][200/200]	Time 1.545 (1.529)	Data 0.002 (0.036)	Loss 1.293 (1.013)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.663 (0.771)	Data 0.000 (0.021)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.947643041610718
+==> Statistics for epoch 41: 700 clusters
+Epoch: [41][10/200]	Time 1.473 (1.548)	Data 0.001 (0.102)	Loss 0.339 (0.255)
+Epoch: [41][20/200]	Time 1.453 (1.523)	Data 0.000 (0.051)	Loss 0.304 (0.257)
+Epoch: [41][30/200]	Time 1.470 (1.506)	Data 0.001 (0.034)	Loss 0.170 (0.240)
+Epoch: [41][40/200]	Time 1.555 (1.505)	Data 0.000 (0.026)	Loss 0.225 (0.242)
+Epoch: [41][50/200]	Time 1.476 (1.528)	Data 0.000 (0.049)	Loss 1.354 (0.365)
+Epoch: [41][60/200]	Time 1.455 (1.525)	Data 0.001 (0.041)	Loss 0.984 (0.505)
+Epoch: [41][70/200]	Time 1.458 (1.518)	Data 0.000 (0.035)	Loss 1.442 (0.599)
+Epoch: [41][80/200]	Time 1.481 (1.516)	Data 0.000 (0.031)	Loss 1.396 (0.693)
+Epoch: [41][90/200]	Time 1.515 (1.528)	Data 0.000 (0.045)	Loss 0.852 (0.743)
+Epoch: [41][100/200]	Time 1.543 (1.523)	Data 0.000 (0.040)	Loss 1.044 (0.784)
+Epoch: [41][110/200]	Time 1.503 (1.520)	Data 0.000 (0.037)	Loss 1.402 (0.842)
+Epoch: [41][120/200]	Time 1.486 (1.517)	Data 0.000 (0.034)	Loss 1.357 (0.878)
+Epoch: [41][130/200]	Time 3.123 (1.526)	Data 1.502 (0.043)	Loss 1.137 (0.899)
+Epoch: [41][140/200]	Time 1.412 (1.523)	Data 0.001 (0.040)	Loss 1.424 (0.921)
+Epoch: [41][150/200]	Time 1.555 (1.523)	Data 0.001 (0.037)	Loss 1.137 (0.934)
+Epoch: [41][160/200]	Time 1.568 (1.522)	Data 0.001 (0.035)	Loss 1.055 (0.952)
+Epoch: [41][170/200]	Time 1.465 (1.518)	Data 0.000 (0.033)	Loss 0.543 (0.965)
+Epoch: [41][180/200]	Time 1.403 (1.524)	Data 0.001 (0.040)	Loss 1.348 (0.974)
+Epoch: [41][190/200]	Time 1.459 (1.522)	Data 0.000 (0.038)	Loss 0.954 (0.985)
+Epoch: [41][200/200]	Time 1.754 (1.521)	Data 0.000 (0.036)	Loss 0.916 (0.996)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.653 (0.746)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.185348510742188
+==> Statistics for epoch 42: 700 clusters
+Epoch: [42][10/200]	Time 1.547 (1.540)	Data 0.000 (0.089)	Loss 0.390 (0.299)
+Epoch: [42][20/200]	Time 1.457 (1.506)	Data 0.001 (0.045)	Loss 0.210 (0.290)
+Epoch: [42][30/200]	Time 1.503 (1.503)	Data 0.001 (0.030)	Loss 0.235 (0.269)
+Epoch: [42][40/200]	Time 1.453 (1.500)	Data 0.000 (0.023)	Loss 0.239 (0.251)
+Epoch: [42][50/200]	Time 1.464 (1.537)	Data 0.000 (0.050)	Loss 0.919 (0.387)
+Epoch: [42][60/200]	Time 1.462 (1.530)	Data 0.000 (0.042)	Loss 1.342 (0.517)
+Epoch: [42][70/200]	Time 1.415 (1.527)	Data 0.001 (0.036)	Loss 1.849 (0.633)
+Epoch: [42][80/200]	Time 1.500 (1.522)	Data 0.000 (0.031)	Loss 1.284 (0.703)
+Epoch: [42][90/200]	Time 1.575 (1.538)	Data 0.001 (0.046)	Loss 1.378 (0.764)
+Epoch: [42][100/200]	Time 1.546 (1.533)	Data 0.000 (0.041)	Loss 1.237 (0.809)
+Epoch: [42][110/200]	Time 1.467 (1.529)	Data 0.001 (0.037)	Loss 1.079 (0.842)
+Epoch: [42][120/200]	Time 1.542 (1.529)	Data 0.000 (0.034)	Loss 0.736 (0.876)
+Epoch: [42][130/200]	Time 3.032 (1.538)	Data 1.416 (0.043)	Loss 1.045 (0.901)
+Epoch: [42][140/200]	Time 1.499 (1.535)	Data 0.001 (0.040)	Loss 1.012 (0.919)
+Epoch: [42][150/200]	Time 1.418 (1.531)	Data 0.000 (0.037)	Loss 1.556 (0.942)
+Epoch: [42][160/200]	Time 1.541 (1.528)	Data 0.001 (0.035)	Loss 1.103 (0.952)
+Epoch: [42][170/200]	Time 1.557 (1.526)	Data 0.000 (0.033)	Loss 1.538 (0.969)
+Epoch: [42][180/200]	Time 1.541 (1.533)	Data 0.001 (0.039)	Loss 1.435 (0.983)
+Epoch: [42][190/200]	Time 1.517 (1.529)	Data 0.000 (0.037)	Loss 1.619 (0.993)
+Epoch: [42][200/200]	Time 1.482 (1.527)	Data 0.000 (0.035)	Loss 1.037 (1.002)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.762 (0.762)	Data 0.000 (0.026)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.301432847976685
+==> Statistics for epoch 43: 703 clusters
+Epoch: [43][10/200]	Time 1.444 (1.552)	Data 0.001 (0.103)	Loss 0.192 (0.324)
+Epoch: [43][20/200]	Time 1.439 (1.513)	Data 0.000 (0.052)	Loss 0.209 (0.293)
+Epoch: [43][30/200]	Time 1.588 (1.516)	Data 0.000 (0.035)	Loss 0.283 (0.277)
+Epoch: [43][40/200]	Time 1.466 (1.513)	Data 0.000 (0.026)	Loss 0.253 (0.261)
+Epoch: [43][50/200]	Time 1.544 (1.535)	Data 0.000 (0.049)	Loss 1.015 (0.382)
+Epoch: [43][60/200]	Time 1.524 (1.526)	Data 0.001 (0.041)	Loss 0.999 (0.534)
+Epoch: [43][70/200]	Time 1.490 (1.515)	Data 0.000 (0.035)	Loss 1.413 (0.638)
+Epoch: [43][80/200]	Time 1.528 (1.513)	Data 0.000 (0.031)	Loss 1.166 (0.694)
+Epoch: [43][90/200]	Time 1.341 (1.524)	Data 0.000 (0.044)	Loss 1.253 (0.746)
+Epoch: [43][100/200]	Time 1.432 (1.511)	Data 0.000 (0.040)	Loss 1.343 (0.784)
+Epoch: [43][110/200]	Time 1.441 (1.506)	Data 0.000 (0.036)	Loss 1.197 (0.820)
+Epoch: [43][120/200]	Time 1.465 (1.504)	Data 0.001 (0.033)	Loss 0.995 (0.847)
+Epoch: [43][130/200]	Time 3.012 (1.515)	Data 1.470 (0.042)	Loss 0.843 (0.862)
+Epoch: [43][140/200]	Time 1.500 (1.515)	Data 0.000 (0.039)	Loss 1.303 (0.893)
+Epoch: [43][150/200]	Time 1.434 (1.514)	Data 0.000 (0.037)	Loss 0.950 (0.914)
+Epoch: [43][160/200]	Time 1.513 (1.511)	Data 0.000 (0.034)	Loss 1.199 (0.931)
+Epoch: [43][170/200]	Time 1.568 (1.510)	Data 0.000 (0.032)	Loss 1.017 (0.945)
+Epoch: [43][180/200]	Time 1.465 (1.516)	Data 0.000 (0.040)	Loss 1.119 (0.957)
+Epoch: [43][190/200]	Time 1.530 (1.515)	Data 0.001 (0.038)	Loss 0.788 (0.972)
+Epoch: [43][200/200]	Time 1.467 (1.513)	Data 0.001 (0.036)	Loss 1.295 (0.994)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.722 (0.765)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.960912227630615
+==> Statistics for epoch 44: 703 clusters
+Epoch: [44][10/200]	Time 1.413 (1.548)	Data 0.000 (0.093)	Loss 0.216 (0.308)
+Epoch: [44][20/200]	Time 1.545 (1.520)	Data 0.001 (0.047)	Loss 0.464 (0.303)
+Epoch: [44][30/200]	Time 1.516 (1.511)	Data 0.001 (0.031)	Loss 0.245 (0.273)
+Epoch: [44][40/200]	Time 1.571 (1.504)	Data 0.000 (0.024)	Loss 0.196 (0.254)
+Epoch: [44][50/200]	Time 1.481 (1.528)	Data 0.000 (0.047)	Loss 1.359 (0.395)
+Epoch: [44][60/200]	Time 1.487 (1.527)	Data 0.000 (0.040)	Loss 0.730 (0.503)
+Epoch: [44][70/200]	Time 1.511 (1.522)	Data 0.001 (0.034)	Loss 1.184 (0.597)
+Epoch: [44][80/200]	Time 1.517 (1.517)	Data 0.000 (0.030)	Loss 0.819 (0.669)
+Epoch: [44][90/200]	Time 1.477 (1.532)	Data 0.001 (0.044)	Loss 1.373 (0.725)
+Epoch: [44][100/200]	Time 1.520 (1.529)	Data 0.000 (0.039)	Loss 1.734 (0.788)
+Epoch: [44][110/200]	Time 1.479 (1.528)	Data 0.000 (0.036)	Loss 0.881 (0.819)
+Epoch: [44][120/200]	Time 1.572 (1.525)	Data 0.002 (0.033)	Loss 1.099 (0.847)
+Epoch: [44][130/200]	Time 3.057 (1.533)	Data 1.475 (0.042)	Loss 1.129 (0.860)
+Epoch: [44][140/200]	Time 1.535 (1.530)	Data 0.000 (0.039)	Loss 1.558 (0.890)
+Epoch: [44][150/200]	Time 1.646 (1.528)	Data 0.000 (0.036)	Loss 1.389 (0.919)
+Epoch: [44][160/200]	Time 1.490 (1.526)	Data 0.000 (0.034)	Loss 1.152 (0.938)
+Epoch: [44][170/200]	Time 1.423 (1.524)	Data 0.000 (0.032)	Loss 1.102 (0.945)
+Epoch: [44][180/200]	Time 1.440 (1.532)	Data 0.001 (0.038)	Loss 1.243 (0.956)
+Epoch: [44][190/200]	Time 1.472 (1.530)	Data 0.000 (0.036)	Loss 0.844 (0.970)
+Epoch: [44][200/200]	Time 1.480 (1.529)	Data 0.000 (0.034)	Loss 1.556 (0.983)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.759 (0.763)	Data 0.001 (0.022)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.545746326446533
+==> Statistics for epoch 45: 701 clusters
+Epoch: [45][10/200]	Time 1.488 (1.549)	Data 0.000 (0.095)	Loss 0.306 (0.323)
+Epoch: [45][20/200]	Time 1.449 (1.526)	Data 0.001 (0.048)	Loss 0.242 (0.289)
+Epoch: [45][30/200]	Time 1.471 (1.523)	Data 0.000 (0.032)	Loss 0.161 (0.274)
+Epoch: [45][40/200]	Time 1.539 (1.517)	Data 0.000 (0.024)	Loss 0.157 (0.259)
+Epoch: [45][50/200]	Time 1.454 (1.542)	Data 0.001 (0.049)	Loss 0.988 (0.388)
+Epoch: [45][60/200]	Time 1.504 (1.536)	Data 0.000 (0.041)	Loss 1.141 (0.519)
+Epoch: [45][70/200]	Time 1.490 (1.527)	Data 0.000 (0.035)	Loss 0.870 (0.607)
+Epoch: [45][80/200]	Time 1.441 (1.521)	Data 0.000 (0.031)	Loss 0.930 (0.683)
+Epoch: [45][90/200]	Time 1.524 (1.534)	Data 0.000 (0.045)	Loss 1.700 (0.740)
+Epoch: [45][100/200]	Time 1.511 (1.531)	Data 0.000 (0.040)	Loss 1.377 (0.794)
+Epoch: [45][110/200]	Time 1.396 (1.524)	Data 0.000 (0.037)	Loss 0.896 (0.815)
+Epoch: [45][120/200]	Time 1.447 (1.521)	Data 0.000 (0.034)	Loss 0.874 (0.842)
+Epoch: [45][130/200]	Time 3.096 (1.530)	Data 1.566 (0.043)	Loss 0.841 (0.861)
+Epoch: [45][140/200]	Time 1.534 (1.527)	Data 0.000 (0.040)	Loss 1.207 (0.877)
+Epoch: [45][150/200]	Time 1.532 (1.525)	Data 0.000 (0.037)	Loss 1.373 (0.899)
+Epoch: [45][160/200]	Time 1.563 (1.524)	Data 0.000 (0.035)	Loss 0.964 (0.910)
+Epoch: [45][170/200]	Time 1.427 (1.522)	Data 0.000 (0.033)	Loss 1.154 (0.934)
+Epoch: [45][180/200]	Time 1.528 (1.531)	Data 0.001 (0.040)	Loss 0.822 (0.948)
+Epoch: [45][190/200]	Time 1.439 (1.528)	Data 0.000 (0.037)	Loss 1.089 (0.956)
+Epoch: [45][200/200]	Time 1.535 (1.528)	Data 0.000 (0.036)	Loss 1.600 (0.969)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.694 (0.756)	Data 0.000 (0.023)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.036695957183838
+==> Statistics for epoch 46: 701 clusters
+Epoch: [46][10/200]	Time 1.512 (1.533)	Data 0.000 (0.097)	Loss 0.226 (0.278)
+Epoch: [46][20/200]	Time 1.477 (1.518)	Data 0.002 (0.049)	Loss 0.190 (0.263)
+Epoch: [46][30/200]	Time 1.560 (1.510)	Data 0.000 (0.033)	Loss 0.175 (0.246)
+Epoch: [46][40/200]	Time 1.465 (1.498)	Data 0.000 (0.025)	Loss 0.151 (0.238)
+Epoch: [46][50/200]	Time 1.451 (1.531)	Data 0.000 (0.048)	Loss 0.814 (0.367)
+Epoch: [46][60/200]	Time 1.493 (1.531)	Data 0.000 (0.040)	Loss 1.108 (0.518)
+Epoch: [46][70/200]	Time 1.497 (1.527)	Data 0.001 (0.034)	Loss 0.949 (0.589)
+Epoch: [46][80/200]	Time 1.573 (1.527)	Data 0.000 (0.030)	Loss 0.935 (0.667)
+Epoch: [46][90/200]	Time 1.464 (1.544)	Data 0.000 (0.045)	Loss 1.056 (0.720)
+Epoch: [46][100/200]	Time 1.398 (1.535)	Data 0.001 (0.040)	Loss 1.157 (0.763)
+Epoch: [46][110/200]	Time 1.500 (1.529)	Data 0.001 (0.037)	Loss 0.827 (0.798)
+Epoch: [46][120/200]	Time 1.593 (1.527)	Data 0.000 (0.034)	Loss 0.999 (0.828)
+Epoch: [46][130/200]	Time 3.049 (1.535)	Data 1.566 (0.043)	Loss 1.073 (0.854)
+Epoch: [46][140/200]	Time 1.506 (1.532)	Data 0.000 (0.040)	Loss 1.201 (0.882)
+Epoch: [46][150/200]	Time 1.432 (1.528)	Data 0.000 (0.037)	Loss 1.348 (0.896)
+Epoch: [46][160/200]	Time 1.395 (1.524)	Data 0.000 (0.035)	Loss 1.172 (0.914)
+Epoch: [46][170/200]	Time 1.477 (1.521)	Data 0.000 (0.033)	Loss 0.773 (0.928)
+Epoch: [46][180/200]	Time 1.434 (1.528)	Data 0.000 (0.040)	Loss 1.030 (0.937)
+Epoch: [46][190/200]	Time 1.525 (1.525)	Data 0.001 (0.038)	Loss 1.225 (0.952)
+Epoch: [46][200/200]	Time 1.461 (1.523)	Data 0.000 (0.036)	Loss 1.170 (0.960)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.646 (0.775)	Data 0.000 (0.027)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.148656368255615
+==> Statistics for epoch 47: 702 clusters
+Epoch: [47][10/200]	Time 1.486 (1.546)	Data 0.000 (0.089)	Loss 0.203 (0.271)
+Epoch: [47][20/200]	Time 1.457 (1.531)	Data 0.000 (0.045)	Loss 0.278 (0.271)
+Epoch: [47][30/200]	Time 1.457 (1.516)	Data 0.001 (0.030)	Loss 0.111 (0.255)
+Epoch: [47][40/200]	Time 1.500 (1.505)	Data 0.000 (0.023)	Loss 0.121 (0.242)
+Epoch: [47][50/200]	Time 1.530 (1.538)	Data 0.000 (0.048)	Loss 1.028 (0.377)
+Epoch: [47][60/200]	Time 1.580 (1.533)	Data 0.000 (0.040)	Loss 1.657 (0.520)
+Epoch: [47][70/200]	Time 1.468 (1.525)	Data 0.000 (0.035)	Loss 1.130 (0.620)
+Epoch: [47][80/200]	Time 1.507 (1.521)	Data 0.000 (0.030)	Loss 2.027 (0.691)
+Epoch: [47][90/200]	Time 1.433 (1.533)	Data 0.001 (0.043)	Loss 1.620 (0.760)
+Epoch: [47][100/200]	Time 1.485 (1.527)	Data 0.001 (0.038)	Loss 1.721 (0.803)
+Epoch: [47][110/200]	Time 1.527 (1.524)	Data 0.000 (0.035)	Loss 1.153 (0.843)
+Epoch: [47][120/200]	Time 1.462 (1.522)	Data 0.001 (0.032)	Loss 1.189 (0.869)
+Epoch: [47][130/200]	Time 2.998 (1.531)	Data 1.419 (0.041)	Loss 1.235 (0.899)
+Epoch: [47][140/200]	Time 1.502 (1.526)	Data 0.000 (0.038)	Loss 0.938 (0.917)
+Epoch: [47][150/200]	Time 1.543 (1.524)	Data 0.001 (0.035)	Loss 1.022 (0.943)
+Epoch: [47][160/200]	Time 1.542 (1.521)	Data 0.001 (0.033)	Loss 0.996 (0.957)
+Epoch: [47][170/200]	Time 1.478 (1.519)	Data 0.000 (0.031)	Loss 1.564 (0.975)
+Epoch: [47][180/200]	Time 1.466 (1.525)	Data 0.001 (0.037)	Loss 0.898 (0.980)
+Epoch: [47][190/200]	Time 1.505 (1.522)	Data 0.000 (0.035)	Loss 1.605 (0.995)
+Epoch: [47][200/200]	Time 1.495 (1.521)	Data 0.000 (0.033)	Loss 0.811 (1.008)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.736 (0.768)	Data 0.000 (0.029)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 18.27037000656128
+==> Statistics for epoch 48: 702 clusters
+Epoch: [48][10/200]	Time 1.458 (1.524)	Data 0.000 (0.095)	Loss 0.263 (0.262)
+Epoch: [48][20/200]	Time 1.485 (1.507)	Data 0.001 (0.048)	Loss 0.274 (0.278)
+Epoch: [48][30/200]	Time 1.407 (1.501)	Data 0.000 (0.032)	Loss 0.269 (0.268)
+Epoch: [48][40/200]	Time 1.416 (1.493)	Data 0.000 (0.024)	Loss 0.225 (0.253)
+Epoch: [48][50/200]	Time 1.411 (1.514)	Data 0.001 (0.050)	Loss 1.664 (0.368)
+Epoch: [48][60/200]	Time 1.490 (1.499)	Data 0.000 (0.041)	Loss 1.208 (0.497)
+Epoch: [48][70/200]	Time 1.462 (1.497)	Data 0.000 (0.036)	Loss 1.852 (0.603)
+Epoch: [48][80/200]	Time 1.488 (1.493)	Data 0.000 (0.031)	Loss 1.235 (0.648)
+Epoch: [48][90/200]	Time 1.497 (1.510)	Data 0.001 (0.044)	Loss 1.233 (0.700)
+Epoch: [48][100/200]	Time 1.456 (1.508)	Data 0.000 (0.039)	Loss 1.638 (0.755)
+Epoch: [48][110/200]	Time 1.476 (1.505)	Data 0.000 (0.036)	Loss 1.007 (0.805)
+Epoch: [48][120/200]	Time 1.472 (1.504)	Data 0.000 (0.033)	Loss 1.010 (0.840)
+Epoch: [48][130/200]	Time 3.013 (1.516)	Data 1.476 (0.042)	Loss 1.268 (0.867)
+Epoch: [48][140/200]	Time 1.522 (1.516)	Data 0.000 (0.039)	Loss 1.387 (0.898)
+Epoch: [48][150/200]	Time 1.505 (1.516)	Data 0.001 (0.036)	Loss 1.300 (0.913)
+Epoch: [48][160/200]	Time 1.387 (1.514)	Data 0.000 (0.034)	Loss 0.990 (0.927)
+Epoch: [48][170/200]	Time 1.454 (1.511)	Data 0.000 (0.032)	Loss 1.190 (0.948)
+Epoch: [48][180/200]	Time 1.491 (1.518)	Data 0.000 (0.039)	Loss 1.208 (0.958)
+Epoch: [48][190/200]	Time 1.575 (1.517)	Data 0.000 (0.037)	Loss 0.950 (0.966)
+Epoch: [48][200/200]	Time 1.537 (1.515)	Data 0.000 (0.035)	Loss 1.427 (0.988)
+==> Create pseudo labels for unlabeled data
+bruteForceKnn is deprecated; call bfKnn instead
+/home/yangj/miniconda3/envs/pbr/lib/python3.9/site-packages/torch/utils/data/sampler.py:77: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn(
+Extract Features: [50/65]	Time 0.723 (0.759)	Data 0.000 (0.028)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 17.13890528678894
+==> Statistics for epoch 49: 704 clusters
+Epoch: [49][10/200]	Time 1.461 (1.577)	Data 0.000 (0.104)	Loss 0.309 (0.325)
+Epoch: [49][20/200]	Time 1.529 (1.530)	Data 0.000 (0.052)	Loss 0.300 (0.308)
+Epoch: [49][30/200]	Time 1.422 (1.490)	Data 0.000 (0.035)	Loss 0.210 (0.282)
+Epoch: [49][40/200]	Time 1.400 (1.471)	Data 0.000 (0.026)	Loss 0.281 (0.266)
+Epoch: [49][50/200]	Time 1.519 (1.508)	Data 0.000 (0.054)	Loss 1.088 (0.378)
+Epoch: [49][60/200]	Time 1.408 (1.504)	Data 0.001 (0.045)	Loss 1.251 (0.532)
+Epoch: [49][70/200]	Time 1.471 (1.504)	Data 0.001 (0.038)	Loss 0.914 (0.629)
+Epoch: [49][80/200]	Time 1.474 (1.502)	Data 0.000 (0.034)	Loss 1.548 (0.692)
+Epoch: [49][90/200]	Time 1.581 (1.519)	Data 0.000 (0.047)	Loss 0.968 (0.757)
+Epoch: [49][100/200]	Time 1.514 (1.519)	Data 0.001 (0.042)	Loss 1.330 (0.789)
+Epoch: [49][110/200]	Time 1.498 (1.517)	Data 0.000 (0.038)	Loss 0.943 (0.824)
+Epoch: [49][120/200]	Time 1.449 (1.515)	Data 0.000 (0.035)	Loss 1.197 (0.844)
+Epoch: [49][130/200]	Time 1.474 (1.514)	Data 0.000 (0.033)	Loss 1.127 (0.879)
+Epoch: [49][140/200]	Time 1.489 (1.523)	Data 0.000 (0.041)	Loss 1.165 (0.896)
+Epoch: [49][150/200]	Time 1.434 (1.522)	Data 0.001 (0.039)	Loss 1.644 (0.910)
+Epoch: [49][160/200]	Time 1.548 (1.521)	Data 0.000 (0.036)	Loss 1.951 (0.932)
+Epoch: [49][170/200]	Time 1.448 (1.519)	Data 0.000 (0.034)	Loss 1.149 (0.940)
+Epoch: [49][180/200]	Time 1.547 (1.527)	Data 0.001 (0.041)	Loss 0.941 (0.956)
+Epoch: [49][190/200]	Time 1.464 (1.526)	Data 0.000 (0.039)	Loss 1.277 (0.966)
+Epoch: [49][200/200]	Time 1.432 (1.523)	Data 0.001 (0.037)	Loss 0.802 (0.980)
+Extract Features: [50/78]	Time 0.780 (0.766)	Data 0.001 (0.025)	
+Mean AP: 73.7%
+
+ * Finished epoch  49  model mAP: 73.7%  best: 73.7% *
+
+==> Test with the best model:
+=> Loaded checkpoint '/home/yangj/cluster-contrast-reid/examples/logs/model_best.pth.tar'
+Extract Features: [50/78]	Time 0.722 (0.751)	Data 0.000 (0.019)	
+Mean AP: 73.7%
+CMC Scores:
+  top-1          85.2%
+  top-5          92.5%
+  top-10         94.7%
+Total running time:  5:56:14.922602

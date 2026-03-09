@@ -1,0 +1,140 @@
+2025-03-06 17:37:10,473 logger INFO: Saving model in the path :logs/single-source/ms_to_ma
+2025-03-06 17:37:10,473 logger INFO: [35mcfg[0m = Config()
+[35mcfg[0m.override(False).set_attribute('_cfgs_update_at_parser', ('alchemycat_configs/base/model.yaml', 'alchemycat_configs/base/input.yaml', 'alchemycat_configs/base/test.yaml', 'alchemycat_configs/base/data/dataloader.yaml', 'alchemycat_configs/base/data/dataset.yaml', 'alchemycat_configs/base/solver/adam.yaml', 'alchemycat_configs/pcl/pcl.yaml', 'alchemycat_configs/stable_diffusion/stable_diffusion.yaml'))
+# ------- ↓ LEAVES ↓ ------- #
+[36mcfg.MODEL.SEED[0m = 1234
+[36mcfg.MODEL.NAME[0m = 'ViT-B-16'
+[36mcfg.MODEL.STRIDE_SIZE[0m = [16, 16]
+[36mcfg.MODEL.FREEZE_PATCH_PROJ[0m = True
+[36mcfg.MODEL.FROZEN_BLOCKS[0m = []
+[36mcfg.MODEL.PRETRAINED[0m = ''
+[36mcfg.MODEL.ENABLE_CAM_EMB[0m = False
+[36mcfg.MODEL.ID_LOSS_WEIGHT[0m = 1.0
+[36mcfg.MODEL.PCL_LOSS_WEIGHT[0m = 1.0
+[36mcfg.MODEL.DDPM_LOSS_WEIGHT[0m = 1.0
+[36mcfg.INPUT.SIZE_TRAIN[0m = [256, 128]
+[36mcfg.INPUT.SIZE_TEST[0m = [256, 128]
+[36mcfg.INPUT.PROB[0m = 0.5
+[36mcfg.INPUT.RE_PROB[0m = 0.5
+[36mcfg.INPUT.PADDING[0m = 10
+[36mcfg.INPUT.PIXEL_MEAN[0m = [0.5, 0.5, 0.5]
+[36mcfg.INPUT.PIXEL_STD[0m = [0.5, 0.5, 0.5]
+[36mcfg.INPUT.DIFFUSION_NOISE_AUG[0m = True
+[36mcfg.TEST.WEIGHT[0m = ''
+[36mcfg.TEST.IMS_PER_BATCH[0m = 256
+[36mcfg.TEST.RE_RANKING[0m = False
+[36mcfg.TEST.FEAT_NORM[0m = True
+[36mcfg.TEST.AFTER_BN[0m = True
+[36mcfg.dataloader.batch_size[0m = 32
+[36mcfg.dataloader.shuffle[0m = True
+[36mcfg.dataloader.num_workers[0m = 8
+[36mcfg.dataloader.pin_memory[0m = True
+[36mcfg.dataloader.drop_last[0m = True
+[36mcfg.dataloader.devices[0m = [0, 1, 2, 3]
+[36mcfg.dataset.name[0m = 'Market1501'
+[36mcfg.dataset.root[0m = '/mnt/data_hdd1/yangj/pbr/data/market1501'
+[36mcfg.dataset.train_dir[0m = 'bounding_box_train'
+[36mcfg.dataset.query_dir[0m = 'query'
+[36mcfg.dataset.gallery_dir[0m = 'bounding_box_test'
+[36mcfg.transforms[0m = \ 
+[{'size': [256, 128], 'type': 'Resize'},
+ {'size': [224, 112], 'type': 'RandomCrop'},
+ {'p': 0.5, 'type': 'RandomHorizontalFlip'},
+ {'mean': [0.485, 0.456, 0.406],
+  'std': [0.229, 0.224, 0.225],
+  'type': 'Normalize'}]
+[36mcfg.SOLVER.STAGE2.OPTIMIZER_NAME[0m = 'Adam'
+[36mcfg.SOLVER.STAGE2.MAX_EPOCHS[0m = 1
+[36mcfg.SOLVER.STAGE2.IMS_PER_BATCH[0m = 64
+[36mcfg.SOLVER.STAGE2.BASE_LR[0m = 5e-06
+[36mcfg.SOLVER.STAGE2.WEIGHT_DECAY[0m = 0.0001
+[36mcfg.SOLVER.STAGE2.WARMUP_METHOD[0m = 'linear'
+[36mcfg.SOLVER.STAGE2.WARMUP_ITERS[0m = 10
+[36mcfg.SOLVER.STAGE2.WARMUP_FACTOR[0m = 0.1
+[36mcfg.SOLVER.STAGE2.STEPS[0m = [30, 50]
+[36mcfg.SOLVER.STAGE2.GAMMA[0m = 0.1
+[36mcfg.SOLVER.STAGE2.CHECKPOINT_PERIOD[0m = 60
+[36mcfg.SOLVER.STAGE2.EVAL_PERIOD[0m = 60
+[36mcfg.PCL.USE_PCL[0m = True
+[36mcfg.PCL.MEMORY_TEMP[0m = 0.01
+[36mcfg.PCL.MEMORY_MOMENTUM[0m = 0.2
+[36mcfg.PCL.HARD_MEMORY_UPDATE[0m = True
+[36mcfg.SD.FINETUNE_MODE[0m = 'lora'
+[36mcfg.SD.UNET.PRETRAIN[0m = 'pretrained/v1-5-pruned.ckpt'
+[36mcfg.SD.UNET.UPDATE_PROMPT_EMB[0m = True
+[36mcfg.SD.UNET.LORA_RANK[0m = 32
+[36mcfg.SD.UNET.LORA_ALPHA[0m = 1.0
+[36mcfg.SD.UNET.IN_CHANNELS[0m = 4
+[36mcfg.SD.UNET.OUT_CHANNELS[0m = 4
+[36mcfg.SD.UNET.MODEL_CHANNELS[0m = 320
+[36mcfg.SD.UNET.CONTEXT_DIM[0m = 768
+[36mcfg.SD.UNET.ATTENTION_RESOLUTIONS[0m = [4, 2, 1]
+[36mcfg.SD.UNET.DROPOUT[0m = 0.0
+[36mcfg.SD.UNET.NUM_RES_BLOCKS[0m = 2
+[36mcfg.SD.UNET.CHANNEL_MULT[0m = [1, 2, 4, 4]
+[36mcfg.SD.UNET.CONV_RESAMPLE[0m = True
+[36mcfg.SD.UNET.DIMS[0m = 2
+[36mcfg.SD.UNET.NUM_HEADS[0m = 8
+[36mcfg.SD.UNET.NUM_HEAD_CHANNELS[0m = -1
+[36mcfg.SD.UNET.NUM_HEADS_UPSAMPLE[0m = -1
+[36mcfg.SD.UNET.USE_SCALE_SHIFT_NORM[0m = False
+[36mcfg.SD.UNET.RESBLOCK_UPDOWN[0m = False
+[36mcfg.SD.UNET.USE_NEW_ATTENTION_ORDER[0m = False
+[36mcfg.SD.UNET.USE_SPATIAL_TRANSFORMER[0m = True
+[36mcfg.SD.UNET.TRANSFORMER_DEPTH[0m = 1
+[36mcfg.SD.UNET.USE_CHECKPOINT[0m = True
+[36mcfg.SD.UNET.LEGACY[0m = False
+[36mcfg.SD.UNET.LR_MULT[0m = 1.0
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_TYPE[0m = 'embedding'
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_INIT_STD[0m = 1.0
+[36mcfg.SD.UNET.PROB_TYPE[0m = 'fc'
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_TAU[0m = 1.0
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_USE_HARD_LABEL[0m = False
+[36mcfg.SD.DDPM.IMAGE_SIZE[0m = 128
+[36mcfg.SD.DDPM.TIMESTEPS[0m = 1000
+[36mcfg.SD.DDPM.MAX_TIMESTEP_SAMPLED[0m = 1000
+[36mcfg.SD.DDPM.CHANNELS[0m = 4
+[36mcfg.SD.DDPM.SCALE_FACTOR[0m = 0.18215
+[36mcfg.SD.DDPM.CLIP_DENOISED[0m = True
+[36mcfg.SD.DDPM.LINEAR_START[0m = 0.00085
+[36mcfg.SD.DDPM.LINEAR_END[0m = 0.012
+[36mcfg.SD.DDPM.COSINE_S[0m = 0.008
+[36mcfg.SD.DDPM.GIVEN_BETAS[0m = None
+[36mcfg.SD.DDPM.BETA_SCHEDULE[0m = 'linear'
+[36mcfg.SD.DDPM.ORIGINAL_ELBO_WEIGHT[0m = 0.0
+[36mcfg.SD.DDPM.V_POSTERIOR[0m = 0.0
+[36mcfg.SD.DDPM.L_SIMPLE_WEIGHT[0m = 1.0
+[36mcfg.SD.DDPM.PARAMETERIZATION[0m = 'eps'
+[36mcfg.SD.DDPM.USE_POSITIONAL_ENCODINGS[0m = False
+[36mcfg.SD.DDPM.LEARN_LOGVAR[0m = False
+[36mcfg.SD.DDPM.LOGVAR_INIT[0m = 0.0
+[36mcfg.SD.DDPM.NOISE_ESTIMATE_BEGIN_EP[0m = 1
+[36mcfg.SD.DDPM.AUG_RANDOM_CROP[0m = False
+[36mcfg.SD.AUTOENCODER.EMBED_DIM[0m = 4
+[36mcfg.SD.AUTOENCODER.Z_CHANNELS[0m = 4
+[36mcfg.SD.AUTOENCODER.RESOLUTION[0m = 256
+[36mcfg.SD.AUTOENCODER.IN_CHANNELS[0m = 3
+[36mcfg.SD.AUTOENCODER.OUT_CH[0m = 3
+[36mcfg.SD.AUTOENCODER.CH[0m = 128
+[36mcfg.SD.AUTOENCODER.CH_MULT[0m = [1, 2, 4, 4]
+[36mcfg.SD.AUTOENCODER.NUM_RES_BLOCKS[0m = 2
+[36mcfg.SD.AUTOENCODER.ATTN_RESOLUTIONS[0m = []
+[36mcfg.SD.AUTOENCODER.DROPOUT[0m = 0.0
+[36mcfg.SD.AUTOENCODER.COLORIZE_NLABELS[0m = None
+[36mcfg.DATASETS.NAMES[0m = ('msmt17',)
+[36mcfg.DATASETS.EVAL_DATASET[0m = 'market1501'
+[36mcfg.DATASETS.ROOT_DIR[0m = '/mnt/data_hdd1/yangj/pbr/data'
+[36mcfg.DATASETS.AUGMENTED_DATA_PATH[0m = '/mnt/data_hdd1/yangj/pbr/augmented_data/augmented-market1501'
+[36mcfg.DATALOADER.NUM_INSTANCE[0m = 4
+[36mcfg.DATALOADER.NUM_WORKERS[0m = 4
+[36mcfg.rslt_dir[0m = 'logs/single-source/ms_to_ma'
+[36mcfg.OUTPUT_DIR[0m = 'logs/single-source/ms_to_ma'
+2025-03-06 17:37:11,410 logger INFO: Use market1501 for evaluation.
+2025-03-06 17:37:35,446 logger INFO: Current mode: training
+2025-03-06 17:37:35,447 logger INFO: start training
+2025-03-06 17:37:36,297 logger INFO: Learning rate is changed to 9.50e-07
+2025-03-06 17:37:36,297 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 17:37:59,371 logger INFO: PCL memory shape: torch.Size([1041, 512])
+2025-03-06 17:42:52,101 logger INFO: Epoch 1 done.
+2025-03-06 17:42:52,101 logger INFO: Average time cost per batch = 0.5898s
+2025-03-06 17:42:52,101 logger INFO: Image encoder training done in 0:05:15.804950.

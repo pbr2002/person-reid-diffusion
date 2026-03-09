@@ -1,0 +1,19 @@
+==========
+Args:Namespace(dataset='market1501', batch_size=256, workers=4, height=256, width=128, arch='resnet50', features=0, dropout=0, resume='/home/yangj/cluster-contrast-reid/examples/logs/model_best.pth.tar', rerank=False, dsbn=False, test_source=False, seed=1, data_dir='/mnt/data_hdd1/yangj/pbr/data', pooling_type='gem', embedding_features_path='/home/yangj/cluster-contrast-reid/embedding_features/mark1501_res50_ibn')
+==========
+=> Market1501 loaded
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |   751 |    12936 |         6
+  query    |   750 |     3368 |         6
+  gallery  |   751 |    15913 |         6
+  ----------------------------------------
+=> Loaded checkpoint '/home/yangj/cluster-contrast-reid/examples/logs/model_best.pth.tar'
+Extract Features: [50/76]	Time 0.308 (0.338)	Data 0.001 (0.020)	
+Mean AP: 5.2%
+CMC Scores:
+  top-1          14.5%
+  top-5          25.1%
+  top-10         30.4%

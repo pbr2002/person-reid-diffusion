@@ -1,0 +1,13 @@
+# 忽略Mac系统隐藏文件
+.DS_Store
+**/.DS_Store
+
+# 忽略Python缓存文件（避免上传无用文件）
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 忽略日志文件（可选）
+*.log
+nohup.out

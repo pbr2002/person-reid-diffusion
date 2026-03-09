@@ -1,0 +1,385 @@
+2025-03-06 18:33:19,312 logger INFO: Saving model in the path :logs/single-source/ma_to_d
+2025-03-06 18:33:19,313 logger INFO: [35mcfg[0m = Config()
+[35mcfg[0m.override(False).set_attribute('_cfgs_update_at_parser', ('alchemycat_configs/base/model.yaml', 'alchemycat_configs/base/input.yaml', 'alchemycat_configs/base/test.yaml', 'alchemycat_configs/base/data/dataloader.yaml', 'alchemycat_configs/base/data/dataset2.yaml', 'alchemycat_configs/base/solver/adam.yaml', 'alchemycat_configs/pcl/pcl.yaml', 'alchemycat_configs/stable_diffusion/stable_diffusion.yaml'))
+# ------- ↓ LEAVES ↓ ------- #
+[36mcfg.MODEL.SEED[0m = 1234
+[36mcfg.MODEL.NAME[0m = 'ViT-B-16'
+[36mcfg.MODEL.STRIDE_SIZE[0m = [16, 16]
+[36mcfg.MODEL.FREEZE_PATCH_PROJ[0m = True
+[36mcfg.MODEL.FROZEN_BLOCKS[0m = []
+[36mcfg.MODEL.PRETRAINED[0m = ''
+[36mcfg.MODEL.ENABLE_CAM_EMB[0m = False
+[36mcfg.MODEL.ID_LOSS_WEIGHT[0m = 1.0
+[36mcfg.MODEL.PCL_LOSS_WEIGHT[0m = 1.0
+[36mcfg.MODEL.DDPM_LOSS_WEIGHT[0m = 1.0
+[36mcfg.INPUT.SIZE_TRAIN[0m = [256, 128]
+[36mcfg.INPUT.SIZE_TEST[0m = [256, 128]
+[36mcfg.INPUT.PROB[0m = 0.5
+[36mcfg.INPUT.RE_PROB[0m = 0.5
+[36mcfg.INPUT.PADDING[0m = 10
+[36mcfg.INPUT.PIXEL_MEAN[0m = [0.5, 0.5, 0.5]
+[36mcfg.INPUT.PIXEL_STD[0m = [0.5, 0.5, 0.5]
+[36mcfg.INPUT.DIFFUSION_NOISE_AUG[0m = True
+[36mcfg.TEST.WEIGHT[0m = ''
+[36mcfg.TEST.IMS_PER_BATCH[0m = 256
+[36mcfg.TEST.RE_RANKING[0m = False
+[36mcfg.TEST.FEAT_NORM[0m = True
+[36mcfg.TEST.AFTER_BN[0m = True
+[36mcfg.dataloader.batch_size[0m = 32
+[36mcfg.dataloader.shuffle[0m = True
+[36mcfg.dataloader.num_workers[0m = 8
+[36mcfg.dataloader.pin_memory[0m = True
+[36mcfg.dataloader.drop_last[0m = True
+[36mcfg.dataloader.devices[0m = [0, 1, 2, 3]
+[36mcfg.dataset.name[0m = 'Dukemtmcreid'
+[36mcfg.dataset.root[0m = '/mnt/data_hdd1/yangj/pbr/data/dukemtmcreid'
+[36mcfg.dataset.train_dir[0m = 'bounding_box_train'
+[36mcfg.dataset.query_dir[0m = 'query'
+[36mcfg.dataset.gallery_dir[0m = 'bounding_box_test'
+[36mcfg.transforms[0m = \ 
+[{'size': [256, 128], 'type': 'Resize'},
+ {'size': [224, 112], 'type': 'RandomCrop'},
+ {'p': 0.5, 'type': 'RandomHorizontalFlip'},
+ {'mean': [0.485, 0.456, 0.406],
+  'std': [0.229, 0.224, 0.225],
+  'type': 'Normalize'}]
+[36mcfg.SOLVER.STAGE2.OPTIMIZER_NAME[0m = 'Adam'
+[36mcfg.SOLVER.STAGE2.MAX_EPOCHS[0m = 50
+[36mcfg.SOLVER.STAGE2.IMS_PER_BATCH[0m = 64
+[36mcfg.SOLVER.STAGE2.BASE_LR[0m = 5e-06
+[36mcfg.SOLVER.STAGE2.WEIGHT_DECAY[0m = 0.0001
+[36mcfg.SOLVER.STAGE2.WARMUP_METHOD[0m = 'linear'
+[36mcfg.SOLVER.STAGE2.WARMUP_ITERS[0m = 10
+[36mcfg.SOLVER.STAGE2.WARMUP_FACTOR[0m = 0.1
+[36mcfg.SOLVER.STAGE2.STEPS[0m = [30, 50]
+[36mcfg.SOLVER.STAGE2.GAMMA[0m = 0.1
+[36mcfg.SOLVER.STAGE2.CHECKPOINT_PERIOD[0m = 60
+[36mcfg.SOLVER.STAGE2.EVAL_PERIOD[0m = 60
+[36mcfg.PCL.USE_PCL[0m = True
+[36mcfg.PCL.MEMORY_TEMP[0m = 0.01
+[36mcfg.PCL.MEMORY_MOMENTUM[0m = 0.2
+[36mcfg.PCL.HARD_MEMORY_UPDATE[0m = True
+[36mcfg.SD.FINETUNE_MODE[0m = 'lora'
+[36mcfg.SD.UNET.PRETRAIN[0m = 'pretrained/v1-5-pruned.ckpt'
+[36mcfg.SD.UNET.UPDATE_PROMPT_EMB[0m = True
+[36mcfg.SD.UNET.LORA_RANK[0m = 8
+[36mcfg.SD.UNET.LORA_ALPHA[0m = 1.0
+[36mcfg.SD.UNET.IN_CHANNELS[0m = 4
+[36mcfg.SD.UNET.OUT_CHANNELS[0m = 4
+[36mcfg.SD.UNET.MODEL_CHANNELS[0m = 320
+[36mcfg.SD.UNET.CONTEXT_DIM[0m = 768
+[36mcfg.SD.UNET.ATTENTION_RESOLUTIONS[0m = [4, 2, 1]
+[36mcfg.SD.UNET.DROPOUT[0m = 0.0
+[36mcfg.SD.UNET.NUM_RES_BLOCKS[0m = 2
+[36mcfg.SD.UNET.CHANNEL_MULT[0m = [1, 2, 4, 4]
+[36mcfg.SD.UNET.CONV_RESAMPLE[0m = True
+[36mcfg.SD.UNET.DIMS[0m = 2
+[36mcfg.SD.UNET.NUM_HEADS[0m = 8
+[36mcfg.SD.UNET.NUM_HEAD_CHANNELS[0m = -1
+[36mcfg.SD.UNET.NUM_HEADS_UPSAMPLE[0m = -1
+[36mcfg.SD.UNET.USE_SCALE_SHIFT_NORM[0m = False
+[36mcfg.SD.UNET.RESBLOCK_UPDOWN[0m = False
+[36mcfg.SD.UNET.USE_NEW_ATTENTION_ORDER[0m = False
+[36mcfg.SD.UNET.USE_SPATIAL_TRANSFORMER[0m = True
+[36mcfg.SD.UNET.TRANSFORMER_DEPTH[0m = 1
+[36mcfg.SD.UNET.USE_CHECKPOINT[0m = True
+[36mcfg.SD.UNET.LEGACY[0m = False
+[36mcfg.SD.UNET.LR_MULT[0m = 1.0
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_TYPE[0m = 'embedding'
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_INIT_STD[0m = 1.0
+[36mcfg.SD.UNET.PROB_TYPE[0m = 'fc'
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_TAU[0m = 0.6
+[36mcfg.SD.UNET.CONDITION_BOTTLENECK_USE_HARD_LABEL[0m = False
+[36mcfg.SD.DDPM.IMAGE_SIZE[0m = 128
+[36mcfg.SD.DDPM.TIMESTEPS[0m = 1000
+[36mcfg.SD.DDPM.MAX_TIMESTEP_SAMPLED[0m = 1000
+[36mcfg.SD.DDPM.CHANNELS[0m = 4
+[36mcfg.SD.DDPM.SCALE_FACTOR[0m = 0.18215
+[36mcfg.SD.DDPM.CLIP_DENOISED[0m = True
+[36mcfg.SD.DDPM.LINEAR_START[0m = 0.00085
+[36mcfg.SD.DDPM.LINEAR_END[0m = 0.012
+[36mcfg.SD.DDPM.COSINE_S[0m = 0.008
+[36mcfg.SD.DDPM.GIVEN_BETAS[0m = None
+[36mcfg.SD.DDPM.BETA_SCHEDULE[0m = 'linear'
+[36mcfg.SD.DDPM.ORIGINAL_ELBO_WEIGHT[0m = 0.0
+[36mcfg.SD.DDPM.V_POSTERIOR[0m = 0.0
+[36mcfg.SD.DDPM.L_SIMPLE_WEIGHT[0m = 1.0
+[36mcfg.SD.DDPM.PARAMETERIZATION[0m = 'eps'
+[36mcfg.SD.DDPM.USE_POSITIONAL_ENCODINGS[0m = False
+[36mcfg.SD.DDPM.LEARN_LOGVAR[0m = False
+[36mcfg.SD.DDPM.LOGVAR_INIT[0m = 0.0
+[36mcfg.SD.DDPM.NOISE_ESTIMATE_BEGIN_EP[0m = 1
+[36mcfg.SD.DDPM.AUG_RANDOM_CROP[0m = False
+[36mcfg.SD.AUTOENCODER.EMBED_DIM[0m = 4
+[36mcfg.SD.AUTOENCODER.Z_CHANNELS[0m = 4
+[36mcfg.SD.AUTOENCODER.RESOLUTION[0m = 256
+[36mcfg.SD.AUTOENCODER.IN_CHANNELS[0m = 3
+[36mcfg.SD.AUTOENCODER.OUT_CH[0m = 3
+[36mcfg.SD.AUTOENCODER.CH[0m = 128
+[36mcfg.SD.AUTOENCODER.CH_MULT[0m = [1, 2, 4, 4]
+[36mcfg.SD.AUTOENCODER.NUM_RES_BLOCKS[0m = 2
+[36mcfg.SD.AUTOENCODER.ATTN_RESOLUTIONS[0m = []
+[36mcfg.SD.AUTOENCODER.DROPOUT[0m = 0.0
+[36mcfg.SD.AUTOENCODER.COLORIZE_NLABELS[0m = None
+[36mcfg.DATASETS.NAMES[0m = ('market1501',)
+[36mcfg.DATASETS.EVAL_DATASET[0m = 'dukemtmc'
+[36mcfg.DATASETS.ROOT_DIR[0m = '/mnt/data_hdd1/yangj/pbr/data'
+[36mcfg.DATASETS.AUGMENTED_DATA_PATH[0m = '/mnt/data_hdd1/yangj/pbr/augmented_data/augmented-dukemtmcreid'
+[36mcfg.DATALOADER.NUM_INSTANCE[0m = 4
+[36mcfg.DATALOADER.NUM_WORKERS[0m = 4
+[36mcfg.rslt_dir[0m = 'logs/single-source/ma_to_d'
+[36mcfg.OUTPUT_DIR[0m = 'logs/single-source/ma_to_d'
+2025-03-06 18:33:19,698 logger INFO: Use dukemtmc for evaluation.
+2025-03-06 18:33:39,949 logger INFO: Current mode: training
+2025-03-06 18:33:39,949 logger INFO: start training
+2025-03-06 18:33:40,783 logger INFO: Learning rate is changed to 9.50e-07
+2025-03-06 18:33:40,783 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:33:49,802 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:35:40,831 logger INFO: Epoch 1 done.
+2025-03-06 18:35:40,831 logger INFO: Average time cost per batch = 0.5783s
+2025-03-06 18:35:40,832 logger INFO: Learning rate is changed to 1.40e-06
+2025-03-06 18:35:40,832 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:35:49,342 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:37:39,998 logger INFO: Epoch 2 done.
+2025-03-06 18:37:39,998 logger INFO: Average time cost per batch = 0.5759s
+2025-03-06 18:37:39,999 logger INFO: Learning rate is changed to 1.85e-06
+2025-03-06 18:37:39,999 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:37:48,736 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:39:41,323 logger INFO: Epoch 3 done.
+2025-03-06 18:39:41,323 logger INFO: Average time cost per batch = 0.5811s
+2025-03-06 18:39:41,324 logger INFO: Learning rate is changed to 2.30e-06
+2025-03-06 18:39:41,324 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:39:50,010 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:41:42,960 logger INFO: Epoch 4 done.
+2025-03-06 18:41:42,961 logger INFO: Average time cost per batch = 0.5843s
+2025-03-06 18:41:42,962 logger INFO: Learning rate is changed to 2.75e-06
+2025-03-06 18:41:42,962 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:41:51,670 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:43:43,868 logger INFO: Epoch 5 done.
+2025-03-06 18:43:43,868 logger INFO: Average time cost per batch = 0.5826s
+2025-03-06 18:43:43,869 logger INFO: Learning rate is changed to 3.20e-06
+2025-03-06 18:43:43,869 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:43:52,635 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:45:43,833 logger INFO: Epoch 6 done.
+2025-03-06 18:45:43,833 logger INFO: Average time cost per batch = 0.5769s
+2025-03-06 18:45:43,834 logger INFO: Learning rate is changed to 3.65e-06
+2025-03-06 18:45:43,834 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:45:52,586 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:47:44,284 logger INFO: Epoch 7 done.
+2025-03-06 18:47:44,284 logger INFO: Average time cost per batch = 0.5771s
+2025-03-06 18:47:44,285 logger INFO: Learning rate is changed to 4.10e-06
+2025-03-06 18:47:44,285 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:47:52,966 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:49:44,303 logger INFO: Epoch 8 done.
+2025-03-06 18:49:44,303 logger INFO: Average time cost per batch = 0.5750s
+2025-03-06 18:49:44,304 logger INFO: Learning rate is changed to 4.55e-06
+2025-03-06 18:49:44,304 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:49:53,026 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:51:44,220 logger INFO: Epoch 9 done.
+2025-03-06 18:51:44,221 logger INFO: Average time cost per batch = 0.5774s
+2025-03-06 18:51:44,221 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 18:51:44,221 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:51:52,919 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:54:47,434 logger INFO: Epoch 10 done.
+2025-03-06 18:54:47,434 logger INFO: Average time cost per batch = 0.5759s
+2025-03-06 18:54:47,435 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 18:54:47,435 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:54:56,102 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:56:47,899 logger INFO: Epoch 11 done.
+2025-03-06 18:56:47,899 logger INFO: Average time cost per batch = 0.5773s
+2025-03-06 18:56:47,900 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 18:56:47,901 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:56:56,823 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 18:58:48,660 logger INFO: Epoch 12 done.
+2025-03-06 18:58:48,660 logger INFO: Average time cost per batch = 0.5781s
+2025-03-06 18:58:48,661 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 18:58:48,661 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 18:58:57,350 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:00:48,279 logger INFO: Epoch 13 done.
+2025-03-06 19:00:48,279 logger INFO: Average time cost per batch = 0.5763s
+2025-03-06 19:00:48,280 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:00:48,280 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:00:56,974 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:02:47,356 logger INFO: Epoch 14 done.
+2025-03-06 19:02:47,356 logger INFO: Average time cost per batch = 0.5732s
+2025-03-06 19:02:47,357 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:02:47,357 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:02:56,138 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:04:47,592 logger INFO: Epoch 15 done.
+2025-03-06 19:04:47,593 logger INFO: Average time cost per batch = 0.5759s
+2025-03-06 19:04:47,593 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:04:47,594 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:04:56,262 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:06:46,996 logger INFO: Epoch 16 done.
+2025-03-06 19:06:46,997 logger INFO: Average time cost per batch = 0.5754s
+2025-03-06 19:06:46,998 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:06:46,998 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:06:55,873 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:08:47,528 logger INFO: Epoch 17 done.
+2025-03-06 19:08:47,529 logger INFO: Average time cost per batch = 0.5768s
+2025-03-06 19:08:47,529 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:08:47,530 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:08:56,365 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:10:46,809 logger INFO: Epoch 18 done.
+2025-03-06 19:10:46,809 logger INFO: Average time cost per batch = 0.5742s
+2025-03-06 19:10:46,810 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:10:46,810 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:10:55,453 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:12:46,224 logger INFO: Epoch 19 done.
+2025-03-06 19:12:46,225 logger INFO: Average time cost per batch = 0.5760s
+2025-03-06 19:12:46,225 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:12:46,225 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:12:55,272 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:15:51,791 logger INFO: Epoch 20 done.
+2025-03-06 19:15:51,791 logger INFO: Average time cost per batch = 0.5777s
+2025-03-06 19:15:51,792 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:15:51,792 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:16:00,635 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:17:52,720 logger INFO: Epoch 21 done.
+2025-03-06 19:17:52,720 logger INFO: Average time cost per batch = 0.5829s
+2025-03-06 19:17:52,721 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:17:52,722 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:18:01,450 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:19:53,692 logger INFO: Epoch 22 done.
+2025-03-06 19:19:53,692 logger INFO: Average time cost per batch = 0.5836s
+2025-03-06 19:19:53,693 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:19:53,693 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:20:02,489 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:21:55,386 logger INFO: Epoch 23 done.
+2025-03-06 19:21:55,386 logger INFO: Average time cost per batch = 0.5804s
+2025-03-06 19:21:55,387 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:21:55,388 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:22:04,310 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:23:55,396 logger INFO: Epoch 24 done.
+2025-03-06 19:23:55,397 logger INFO: Average time cost per batch = 0.5749s
+2025-03-06 19:23:55,398 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:23:55,398 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:24:04,329 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:25:55,722 logger INFO: Epoch 25 done.
+2025-03-06 19:25:55,722 logger INFO: Average time cost per batch = 0.5759s
+2025-03-06 19:25:55,723 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:25:55,723 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:26:04,461 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:27:55,777 logger INFO: Epoch 26 done.
+2025-03-06 19:27:55,778 logger INFO: Average time cost per batch = 0.5784s
+2025-03-06 19:27:55,779 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:27:55,779 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:28:04,512 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:29:55,169 logger INFO: Epoch 27 done.
+2025-03-06 19:29:55,169 logger INFO: Average time cost per batch = 0.5753s
+2025-03-06 19:29:55,170 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:29:55,170 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:30:03,941 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:31:54,860 logger INFO: Epoch 28 done.
+2025-03-06 19:31:54,860 logger INFO: Average time cost per batch = 0.5782s
+2025-03-06 19:31:54,861 logger INFO: Learning rate is changed to 5.00e-06
+2025-03-06 19:31:54,861 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:32:03,555 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:33:54,015 logger INFO: Epoch 29 done.
+2025-03-06 19:33:54,016 logger INFO: Average time cost per batch = 0.5773s
+2025-03-06 19:33:54,017 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:33:54,017 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:34:02,716 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:36:56,466 logger INFO: Epoch 30 done.
+2025-03-06 19:36:56,466 logger INFO: Average time cost per batch = 0.5731s
+2025-03-06 19:36:56,467 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:36:56,467 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:37:05,078 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:38:56,511 logger INFO: Epoch 31 done.
+2025-03-06 19:38:56,511 logger INFO: Average time cost per batch = 0.5793s
+2025-03-06 19:38:56,512 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:38:56,512 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:39:05,129 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:40:56,996 logger INFO: Epoch 32 done.
+2025-03-06 19:40:56,996 logger INFO: Average time cost per batch = 0.5785s
+2025-03-06 19:40:56,997 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:40:56,997 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:41:05,640 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:42:57,725 logger INFO: Epoch 33 done.
+2025-03-06 19:42:57,725 logger INFO: Average time cost per batch = 0.5787s
+2025-03-06 19:42:57,726 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:42:57,726 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:43:06,608 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:44:57,487 logger INFO: Epoch 34 done.
+2025-03-06 19:44:57,488 logger INFO: Average time cost per batch = 0.5763s
+2025-03-06 19:44:57,488 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:44:57,489 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:45:06,248 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:46:57,519 logger INFO: Epoch 35 done.
+2025-03-06 19:46:57,520 logger INFO: Average time cost per batch = 0.5765s
+2025-03-06 19:46:57,521 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:46:57,521 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:47:06,570 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:48:57,959 logger INFO: Epoch 36 done.
+2025-03-06 19:48:57,960 logger INFO: Average time cost per batch = 0.5774s
+2025-03-06 19:48:57,961 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:48:57,961 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:49:06,664 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:50:58,502 logger INFO: Epoch 37 done.
+2025-03-06 19:50:58,502 logger INFO: Average time cost per batch = 0.5776s
+2025-03-06 19:50:58,503 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:50:58,503 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:51:07,133 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:52:59,035 logger INFO: Epoch 38 done.
+2025-03-06 19:52:59,035 logger INFO: Average time cost per batch = 0.5783s
+2025-03-06 19:52:59,036 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:52:59,036 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:53:07,678 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:54:58,794 logger INFO: Epoch 39 done.
+2025-03-06 19:54:58,795 logger INFO: Average time cost per batch = 0.5769s
+2025-03-06 19:54:58,795 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:54:58,796 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:55:07,524 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 19:57:59,680 logger INFO: Epoch 40 done.
+2025-03-06 19:57:59,680 logger INFO: Average time cost per batch = 0.5705s
+2025-03-06 19:57:59,681 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 19:57:59,681 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 19:58:08,339 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:00:00,328 logger INFO: Epoch 41 done.
+2025-03-06 20:00:00,329 logger INFO: Average time cost per batch = 0.5788s
+2025-03-06 20:00:00,330 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:00:00,330 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:00:08,911 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:02:00,555 logger INFO: Epoch 42 done.
+2025-03-06 20:02:00,555 logger INFO: Average time cost per batch = 0.5770s
+2025-03-06 20:02:00,557 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:02:00,557 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:02:09,355 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:04:00,209 logger INFO: Epoch 43 done.
+2025-03-06 20:04:00,209 logger INFO: Average time cost per batch = 0.5754s
+2025-03-06 20:04:00,210 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:04:00,210 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:04:09,084 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:06:00,713 logger INFO: Epoch 44 done.
+2025-03-06 20:06:00,714 logger INFO: Average time cost per batch = 0.5757s
+2025-03-06 20:06:00,715 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:06:00,715 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:06:09,633 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:08:01,280 logger INFO: Epoch 45 done.
+2025-03-06 20:08:01,281 logger INFO: Average time cost per batch = 0.5789s
+2025-03-06 20:08:01,282 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:08:01,282 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:08:09,989 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:10:00,574 logger INFO: Epoch 46 done.
+2025-03-06 20:10:00,574 logger INFO: Average time cost per batch = 0.5780s
+2025-03-06 20:10:00,575 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:10:00,575 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:10:09,359 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:12:00,097 logger INFO: Epoch 47 done.
+2025-03-06 20:12:00,098 logger INFO: Average time cost per batch = 0.5757s
+2025-03-06 20:12:00,099 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:12:00,099 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:12:08,938 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:14:00,358 logger INFO: Epoch 48 done.
+2025-03-06 20:14:00,358 logger INFO: Average time cost per batch = 0.5760s
+2025-03-06 20:14:00,359 logger INFO: Learning rate is changed to 5.00e-07
+2025-03-06 20:14:00,359 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:14:08,996 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:15:59,938 logger INFO: Epoch 49 done.
+2025-03-06 20:15:59,939 logger INFO: Average time cost per batch = 0.5765s
+2025-03-06 20:15:59,940 logger INFO: Learning rate is changed to 5.00e-08
+2025-03-06 20:15:59,940 logger INFO: Enable noise estimation loss optimization at current epoch.
+2025-03-06 20:16:08,590 logger INFO: PCL memory shape: torch.Size([751, 512])
+2025-03-06 20:19:02,857 logger INFO: Epoch 50 done.
+2025-03-06 20:19:02,858 logger INFO: Average time cost per batch = 0.5759s
+2025-03-06 20:19:02,858 logger INFO: Image encoder training done in 1:45:22.075072.
