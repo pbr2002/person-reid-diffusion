@@ -6,6 +6,13 @@
 ### 1.1 研究目标
 对比基线模型（Cluster-Contrast-ReID）、扩散模型（DCAC）、GAN模型（DCGAN-tensorflow）在行人重识别任务中的性能，验证扩散式数据增强对模型精度的提升效果。
 
+### 1.2 核心依赖与环境
+| 模型/模块               | Python版本 | 核心框架       | 其他关键依赖       |
+|-------------------------|------------|----------------|--------------------|
+| 基线模型（cluster-contrast-reid） | 3.9        | PyTorch 1.8.0  | 详见对应文件夹requirements.txt |
+| 扩散模型（DCAC）| 3.10       | PyTorch 1.8.0  | 详见对应文件夹requirements.txt |
+| GAN模型（DCGAN-tensorflow）| 3.7    | TensorFlow     | 详见对应文件夹requirements.txt |
+| 通用环境                | -          | CUDA 12.4      | -                  |
 环境设置
 
 基线模型（cluster-contrast-reid）：python3.9 原始链接：https://github.com/alibaba/cluster-contrast-reid
