@@ -32,15 +32,25 @@ cd ..
 ### 2.2 依赖安装
 各模型的依赖包已放在对应文件夹的 `requirements.txt` 中，按需安装：
 ```bash
-# 示例：安装基线模型依赖
+# 示例：安装基线模型依赖和虚拟环境
+conda create -n pbr python=3.9 -y
+conda activate pbr
 cd ../cluster-contrast-reid
 pip install -r requirements.txt
 
-# 安装扩散模型依赖
+# 安装扩散模型依赖和虚拟环境
+conda create -n DCAC python=3.10 -y
+conda activate DCAC
 cd ../DCAC
 pip install -r requirements.txt
 
-# 安装GAN模型依赖（无requirements.txt文件。注：若运行时提示缺少依赖，直接根据报错信息安装即可。）
+# 安装GAN模型依赖和虚拟环境
+conda create -n DCGAN python=3.7 -y
+conda activate DCGAN
+cd ../DCGAN-tensorflow
+# 该项目无固定 requirements.txt
+# 先安装基础依赖，若运行时报错，再根据提示补装缺失包
+pip install tensorflow numpy scipy pillow matplotlib
 
 ### 2.3 路径修改（关键！）
 代码中硬编码的数据集路径（如 `/mnt/data_hdd1/yangj/pbr/data`）需替换为你的本地路径：
