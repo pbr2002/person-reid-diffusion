@@ -19,6 +19,8 @@ mkdir pretrained && cd pretrained
 
 wget https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/blob/main/v1-5-pruned.ckpt
 
+其次，基线模型（cluster-contrast-reid）和扩散模型（DCAC）运行所需依赖包在各自文件夹的requirements.txt文件中
+
 其他需要的环境可以直接代码运行查看提示有什么需要的再安装
 
 路径问题代码运行之后会报错，根据报错修改，或者直接全文件搜索文件路径如/mnt/data_hdd1/yangj/pbr/data，找到有这个地址的代码位置根据自己的地址进行修改
