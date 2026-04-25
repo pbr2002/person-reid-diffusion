@@ -74,6 +74,104 @@ conda deactivate
 2. 将所有匹配到的路径改为你的相应数据集实际存储路径；
 3. 确认修改后保存代码。
 
+## 数据集目录结构
+
+本项目的数据集统一存放在 `/mnt/data_hdd1/yangj/pbr/` 路径下，整体结构如下：
+
+```text
+/mnt/data_hdd1/yangj/pbr/
+├── data/                         # 原始 ReID 数据集
+│   ├── dukemtmcreid/
+│   │   └── DukeMTMC-reID/
+│   │       └── bounding_box_train/
+│   ├── market1501/
+│   │   └── Market-1501-v15.09.15/
+│   │       └── bounding_box_train/
+│   └── msmt17/
+│       └── MSMT17_V1/
+│           └── bounding_box_train/
+│
+├── augmented_data/               # 扩散模型生成的增强数据
+│   ├── augmented-dukemtmcreid/
+│   ├── augmented-market1501/
+│   └── augmented-msmt17/
+│
+├── mixed_data/                   # 原始数据 + 扩散模型增强数据
+│   ├── dukemtmcreid/
+│   │   └── DukeMTMC-reID/
+│   │       └── bounding_box_train/
+│   ├── market1501/
+│   │   └── Market-1501-v15.09.15/
+│   │       └── bounding_box_train/
+│   └── msmt17/
+│       └── MSMT17_V1/
+│           └── bounding_box_train/
+│
+├── other_augmented_data/         # GAN 模型生成的增强数据
+│   ├── augmented-dukemtmcreid/
+│   ├── augmented-market1501/
+│   └── augmented-msmt17/
+│
+└── other_mixed_data/             # 原始数据 + GAN 模型增强数据
+    ├── dukemtmcreid/
+    │   └── DukeMTMC-reID/
+    │       └── bounding_box_train/
+    ├── market1501/
+    │   └── Market-1501-v15.09.15/
+    │       └── bounding_box_train/
+    └── msmt17/
+        └── MSMT17_V1/
+            └── bounding_box_train/
+```
+
+## 目录说明
+
+| 目录 | 含义 |
+|---|---|
+| `data/` | 存放原始行人重识别数据集。 |
+| `augmented_data/` | 存放由扩散模型生成的增强图像数据。 |
+| `mixed_data/` | 存放原始数据与扩散模型增强数据混合后的训练数据。 |
+| `other_augmented_data/` | 存放由 GAN 模型生成的增强图像数据。 |
+| `other_mixed_data/` | 存放原始数据与 GAN 模型增强数据混合后的训练数据。 |
+
+## 数据集说明
+
+本项目目前使用了三个行人重识别数据集：
+
+| 数据集目录名 | 数据集名称 | 说明 |
+|---|---|---|
+| `dukemtmcreid` | DukeMTMC-reID | DukeMTMC-reID 数据集的训练集图像存放在 `DukeMTMC-reID/bounding_box_train/` 下。 |
+| `market1501` | Market-1501 | Market-1501 数据集的训练集图像存放在 `Market-1501-v15.09.15/bounding_box_train/` 下。 |
+| `msmt17` | MSMT17 | MSMT17 数据集的训练集图像存放在 `MSMT17_V1/bounding_box_train/` 下。 |
+
+## 数据划分说明
+
+本项目主要包含三类训练数据：
+
+1. **原始数据**
+
+   位于 `data/` 目录下，包含未经增强处理的原始 ReID 训练图像。
+
+2. **扩散模型增强数据**
+
+   位于 `augmented_data/` 目录下，表示通过扩散模型生成的增强图像。
+
+   对应的混合训练数据位于 `mixed_data/` 目录下，即：
+
+   ```text
+   mixed_data = 原始数据 + 扩散模型增强数据
+   ```
+
+3. **GAN 模型增强数据**
+
+   位于 `other_augmented_data/` 目录下，表示通过 GAN 模型生成的增强图像。
+
+   对应的混合训练数据位于 `other_mixed_data/` 目录下，即：
+
+   ```text
+   other_mixed_data = 原始数据 + GAN 模型增强数据
+   ```
+
 ## 3. 实验流程（Market-1501数据集为例）
 ### 3.1 基线模型测试（无数据增强）
 ```bash
