@@ -1,3 +1,22 @@
+# Diffusion-Based Data Augmentation for Person Re-Identification
+
+An undergraduate research project comparing a person re-identification baseline with diffusion- and GAN-based image augmentation. The experiments combine synthetic pedestrian images with original training data, retrain the baseline, and evaluate retrieval performance using mAP and Rank-1.
+
+## Project highlights
+
+- Prepared and evaluated person re-identification datasets including Market-1501, DukeMTMC-reID, and MSMT17.
+- Reproduced a Cluster Contrast ReID baseline and integrated DCAC diffusion and DCGAN augmentation pipelines for comparison.
+- On Market-1501, the documented diffusion-augmented experiment improved mAP from **82.0 to 83.4** and Rank-1 from **92.2 to 93.2** relative to the recorded baseline.
+
+**Tech:** Python, PyTorch, TensorFlow, CUDA, diffusion models, GANs, computer vision.  
+**Scope:** Research implementation and experiments, not a newly invented baseline or generative architecture. This repository builds on the upstream open-source projects credited in the original documentation below.
+
+## Reproducing the experiments
+
+See the Chinese documentation below for environment setup, dataset layout, training commands, and result files. The scripts contain machine-specific absolute paths; replace those with your own dataset locations before running. Dataset files and pretrained weights must be obtained separately.
+
+---
+
 # person-reid-diffusion
 基于扩散式数据增强的行人重识别方法研究与实现  
 包含基线模型、扩散模型（DCAC）、GAN模型（DCGAN）的完整代码、实验流程、结果分析
